@@ -1,0 +1,654 @@
+SMB_purge = {
+	SMB_coerce_officers = {
+		icon = generic_political_discourse
+		visible = {
+			AND = {
+				NOT = {
+					has_country_flag = SMB_civil_war
+				}
+				check_variable = {
+					var = dissenter_threat
+					value = 0
+					compare = greater_than
+				}
+				has_completed_focus = smb_great_purge
+			}
+		}
+		available = {
+			always = YES
+		}
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		modifier = {
+			political_power_gain = -0.05
+			experience_gain_army = -1.0
+		}
+		
+		days_remove = 30
+		days_re_enable = 5
+		
+		remove_effect = {
+			random_list = {
+				33 = {
+					custom_effect_tooltip = purge_officers_5
+					add_to_variable = {
+						var = army_threat
+						value = -5
+					}
+				}
+				
+				33 = {
+					custom_effect_tooltip = purge_officers_10
+					add_to_variable = {
+						var = army_threat
+						value = -10
+					}
+				}
+				
+				33 = { 
+					custom_effect_tooltip = purge_officers_15
+					add_to_variable = {
+						var = army_threat
+						value = -15
+					}
+				}
+			}
+			hidden = {
+				country_event = { id = purge.2 }
+			}
+		}
+	}
+	
+	
+	SMB_purge_officers = {
+		icon = generic_political_discourse
+		visible = {
+			AND = {
+				NOT = {
+					has_country_flag = SMB_civil_war
+				}
+				check_variable = {
+					var = army_threat
+					value = 0
+					compare = greater_than
+				}
+				check_variable = {
+					var = smb_officers_purged
+					value = -0.5
+					compare = greater_than
+				}
+				has_completed_focus = smb_great_purge
+			}
+		}
+		
+		
+		
+		cost = 20
+		ai_will_do = {
+			factor = 10
+		}
+		modifier = {
+			political_power_gain = -0.1
+			experience_gain_army = -2.0
+		}
+		
+		days_remove = 30
+		days_re_enable = 5
+		
+		remove_effect = {
+			force_update_dynamic_modifier = yes
+			custom_effect_tooltip = SMB_purge_officers_tooltip
+			add_to_variable = {
+				var = smb_officers_purged 
+				value = -0.05
+			}
+			hidden_effect = {
+				random_list = {
+					33 = {
+						add_to_variable = {
+							var = army_threat
+							value = -15
+						}
+					}
+					
+					33 = {
+						add_to_variable = {
+							var = army_threat
+							value = -20
+						}
+					}
+					
+					33 = { 
+						add_to_variable = {
+							var = army_threat
+							value = -25
+						}
+					}
+				}
+				country_event = { id = purge.1 }
+			}
+		}
+	}
+	
+	SMB_mass_arrests = {
+		icon = generic_political_discourse
+		visible = {
+			AND = {
+				NOT = {
+					has_country_flag = SMB_civil_war
+				}
+				check_variable = {
+					var = dissenter_threat
+					value = 0
+					compare = greater_than
+				}
+				has_completed_focus = smb_great_purge
+			}
+		}
+		available = {
+			always = YES
+			has_completed_focus = smb_iron_grip
+		}
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		modifier = {
+			political_power_gain = -0.05
+			industrial_capacity_factory = -0.20
+			consumer_goods_factor = 0.20
+		}
+		
+		days_remove = 30
+		days_re_enable = 5
+		
+		remove_effect = {
+			add_stability = -0.05
+			add_war_support = -0.05
+			random_list = {
+				33 = {
+					custom_effect_tooltip = mass_arrest_5
+					add_to_variable = {
+						var = dissenter_threat
+						value = -5
+					}
+				}
+				
+				33 = {
+					custom_effect_tooltip = mass_arrest_10
+					add_to_variable = {
+						var = dissenter_threat
+						value = -10
+					}
+				}
+				
+				33 = { 
+					custom_effect_tooltip = mass_arrest_15
+					add_to_variable = {
+						var = dissenter_threat
+						value = -15
+					}
+				}
+			}
+			hidden = {
+				country_event = { id = purge.2 }
+			}
+		}
+	}
+	
+	SMB_political_purge = {
+		icon = generic_political_discourse
+		visible = {
+			AND = {
+				NOT = {
+					has_country_flag = SMB_civil_war
+				}
+				check_variable = {
+					var = dissenter_threat
+					value = 0
+					compare = greater_than
+				}
+				check_variable = {
+					var = smb_leaders_purged
+					value = -0.5
+					compare = greater_than
+				}
+				has_completed_focus = smb_great_purge
+			}
+		}
+		
+		
+		
+		cost = 20
+		ai_will_do = {
+			factor = 10
+		}
+		modifier = {
+			political_power_gain = -0.1
+		}
+		
+		days_remove = 30
+		days_re_enable = 5
+		
+		remove_effect = {
+			add_stability = -0.1
+			force_update_dynamic_modifier = yes
+			custom_effect_tooltip = SMB_purge_leaders_tooltip
+			add_to_variable = {
+				var = smb_leaders_purged 
+				value = -0.05
+			}
+			hidden_effect = {
+				random_list = {
+					33 = {
+						add_to_variable = {
+							var = dissenter_threat
+							value = -15
+						}
+					}
+					
+					33 = {
+						add_to_variable = {
+							var = dissenter_threat
+							value = -20
+						}
+					}
+					
+					33 = { 
+						add_to_variable = {
+							var = dissenter_threat
+							value = -25
+						}
+					}
+				}
+				country_event = { id = purge.2 }
+			}
+		}
+	}
+	
+	SMB_brain_drain = {
+		icon = generic_political_discourse
+		visible = {
+			AND = {
+				NOT = {
+					has_country_flag = SMB_civil_war
+				}
+				check_variable = {
+					var = science_threat
+					value = 0
+					compare = greater_than
+				}
+				has_completed_focus = smb_great_purge
+			}
+		}
+		available = {
+			always = YES
+			has_completed_focus = smb_iron_grip
+		}
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		modifier = {
+			political_power_gain = -0.05
+			research_speed_factor = -0.15
+		}
+		
+		days_remove = 30
+		days_re_enable = 5
+		
+		remove_effect = {
+			random_list = {
+				33 = {
+					custom_effect_tooltip = brain_drain_5
+					add_to_variable = {
+						var = science_threat
+						value = -5
+					}
+				}
+				
+				33 = {
+					custom_effect_tooltip = brain_drain_10
+					add_to_variable = {
+						var = science_threat
+						value = -10
+					}
+				}
+				
+				33 = { 
+					custom_effect_tooltip = brain_drain_15
+					add_to_variable = {
+						var = science_threat
+						value = -15
+					}
+				}
+			}	
+			hidden = {
+				country_event = { id = purge.3 }
+			}
+		}
+	}
+	
+	
+	SMB_purge_intellectuals = {
+		icon = generic_political_discourse
+		visible = {
+			AND = {
+				NOT = {
+					has_country_flag = SMB_civil_war
+				}
+				check_variable = {
+					var = science_threat
+					value = 0
+					compare = greater_than
+				}
+				check_variable = {
+					var = smb_scientists_purged
+					value = -0.5
+					compare = greater_than
+				}
+				has_completed_focus = smb_great_purge
+			}
+		}
+		
+		
+		
+		cost = 20
+		ai_will_do = {
+			factor = 10
+		}
+		modifier = {
+			political_power_gain = -0.1
+			research_speed_factor = -0.7
+		}
+		
+		days_remove = 30
+		days_re_enable = 5
+		
+		remove_effect = {
+			custom_effect_tooltip = SMB_purge_intellectuals_tooltip
+			add_to_variable = {
+				var = smb_scientists_purged 
+				value = -0.05
+			}
+			hidden_effect = {
+				random_list = {
+					33 = {
+						add_to_variable = {
+							var = science_threat
+							value = -15
+						}
+					}
+					
+					33 = {
+						add_to_variable = {
+							var = science_threat
+							value = -20
+						}
+					}
+					
+					33 = { 
+						add_to_variable = {
+							var = science_threat
+							value = -25
+						}
+					}
+				}
+				country_event = { id = purge.3 }
+			}
+		}
+	}
+	
+	SMB_revolt = {
+		allowed = { 
+			tag = SMB
+		}
+		
+		is_good = no
+				
+		available = {
+			AND = {
+				check_variable = {
+					var = army_threat
+					value = 1
+					compare = less_than
+				}
+				check_variable = {
+					var = dissenter_threat
+					value = 1
+					compare = less_than
+				}
+				check_variable = {
+					var = science_threat
+					value = 1
+					compare = less_than
+				}
+			}
+		}
+		
+		activation = {
+			AND = {
+				has_completed_focus = smb_iron_grip
+				NOT = {
+					has_country_flag = SMB_civil_war
+				}
+				OR = {
+					check_variable = {
+						var = army_threat
+						value = 1
+						compare = greater_than
+					}
+					check_variable = {
+						var = dissenter_threat
+						value = 1
+						compare = greater_than
+					}
+					check_variable = {
+						var = science_threat
+						value = 1
+						compare = greater_than
+					}
+				}
+			}
+		}
+		
+		days_mission_timeout = 400
+	
+		timeout_effect = {
+			custom_effect_tooltip = SMB_revolt_tooltip
+			hidden_effect = {
+				complete_national_focus = smb_reign_of_terror
+				complete_national_focus = smb_great_purge
+				complete_national_focus = smb_purge_army
+				complete_national_focus = smb_purge_dissenters
+				complete_national_focus = smb_purge_scientists
+				if = {
+					limit = {
+						check_variable = {
+							var = smb_scientists_purged
+							value = 0
+							compare = less_than
+						}
+					}
+					add_dynamic_modifier = { modifier = smb_science_purge }
+				}
+				if = {
+					limit = {
+						check_variable = {
+							var = smb_officers_purged
+							value = 0
+							compare = less_than
+						}
+					}
+					add_dynamic_modifier = { modifier = smb_officer_purge }
+				}
+				if = {
+					limit = {
+						check_variable = {
+							var = smb_leaders_purged
+							value = 0
+							compare = less_than
+						}
+					}
+					add_dynamic_modifier = { modifier = smb_leader_purge }
+				}
+				
+				force_update_dynamic_modifier = yes 
+
+				division_template = {
+					name = "Vostok People's Militia"	
+					
+					regiments = {
+						militia = { x = 0 y = 0 }
+					}
+				}
+
+				set_country_flag = SMB_civil_war
+				load_oob = "SMB_civilwar"
+				if = {
+					limit = {
+						check_variable = {
+							var = army_threat
+							value = 1
+							compare = greater_than
+						}
+					}
+					SAB = {
+						transfer_state = 555
+						transfer_state = 551
+						declare_war_on = {
+							target = SMB
+							type = annex_everything
+						}
+						
+						if = {
+							limit = {
+								check_variable = {
+									var = SMB.army_threat
+									value = 69
+									compare = greater_than
+								}
+							}
+							load_oob = "SAB_civilwar"
+						}
+						
+						if = {
+							limit = {
+								AND = {
+									check_variable = {
+										var = SMB.army_threat
+										value = 71
+										compare = less_than
+									}
+									check_variable = {
+										var = SMB.army_threat
+										value = 59
+										compare = greater_than
+									}
+								}
+							}
+							load_oob = "SAB_civilwar1"
+						}
+						
+						if = {
+							limit = {
+								AND = {
+									check_variable = {
+										var = SMB.army_threat
+										value = 61
+										compare = less_than
+									}
+									check_variable = {
+										var = SMB.army_threat
+										value = 49
+										compare = greater_than
+									}
+								}
+							}
+							load_oob = "SAB_civilwar2"
+						}
+						
+						if = {
+							limit = {
+								check_variable = {
+									var = SMB.army_threat
+									value = 50
+									compare = less_than
+								}
+							}
+							load_oob = "SAB_civilwar3"
+						}
+						
+					}
+				}
+				
+				if = {
+					limit = {
+						check_variable = {
+							var = dissenter_threat
+							value = 1
+							compare = greater_than
+						}
+					}
+					PVB = {
+						transfer_state = 520
+						transfer_state = 543
+						declare_war_on = {
+							target = SMB
+							type = annex_everything
+						}
+						hidden_effect = {
+							load_oob = "PVB_civilwar"
+						}
+					}
+				}
+			}
+		}
+		
+		complete_effect = {
+			hidden_effect = {
+				complete_national_focus = smb_reign_of_terror
+				complete_national_focus = smb_great_purge
+				complete_national_focus = smb_purge_army
+				complete_national_focus = smb_purge_dissenters
+				complete_national_focus = smb_purge_scientists
+				set_country_flag = smb_politics_done
+				country_event = { id = purge.5 }
+				if = {
+					limit = {
+						check_variable = {
+							var = smb_scientists_purged
+							value = 0
+							compare = less_than
+						}
+					}
+					add_dynamic_modifier = { modifier = smb_science_purge }
+				}
+				if = {
+					limit = {
+						check_variable = {
+							var = smb_officers_purged
+							value = 0
+							compare = less_than
+						}
+					}
+					add_dynamic_modifier = { modifier = smb_officer_purge }
+				}
+				if = {
+					limit = {
+						check_variable = {
+							var = smb_leaders_purged
+							value = 0
+							compare = less_than
+						}
+					}
+					add_dynamic_modifier = { modifier = smb_leader_purge }
+				}
+				
+				force_update_dynamic_modifier = yes 
+			}
+		}		
+	}
+}

@@ -1,0 +1,25 @@
+state={
+	id=130
+	name="STATE_130"
+	provinces={
+		160 904 1335 1424 1558 1997 2235 2917 2937 3434 3626 4367 4419 4585 5322 6281 6767 7540 7709 8084 8337 8400 8754 8762 8847 8853 8884 8904 9539 9600 
+	}
+	manpower = 100000
+    buildings_max_level_factor=1.000
+    state_category = megalopolis
+	resources = {
+		steel = 10
+	}
+    history=
+    {
+        owner=EUB
+        add_core_of = EUB
+		victory_points = { 5322 50 }
+		buildings = {
+			industrial_complex = 5
+			arms_factory = 2
+			infrastructure = 2
+		}
+    }
+
+}

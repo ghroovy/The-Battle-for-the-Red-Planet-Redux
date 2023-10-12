@@ -1,0 +1,28 @@
+state={
+	id=52
+	name="American Base Washington"
+	provinces={
+		18 234 419 516 1446 1509 1569 1684 1924 2350 2439 2854 3490 3646 4209 4443 4739 5455 6470 7236 8267 8518 8752 9159 9220 9233 9241 9264 
+	}
+	manpower = 100000
+    buildings_max_level_factor=1.000
+    state_category = megalopolis
+	
+	resources={
+		steel=5
+	}
+	
+    history=
+    {
+        owner=AMB
+        add_core_of = AMB
+		victory_points = { 1509 50 }
+		victory_points = { 9159 30 }
+		buildings = {
+			industrial_complex = 5
+			arms_factory = 2
+			infrastructure = 2
+		}
+    }
+
+}

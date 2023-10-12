@@ -1,0 +1,31 @@
+﻿l_english:
+ WST_neutrality:1 " "
+ WST_neutrality_DEF:1 "The Unconquered Wasteland of Mars"
+ GMB_national_socialism:1 "German Base Alpha"
+ GMB_national_socialism_def:1 "The German Base "Alpha""
+ AMB_conservatism_i:1 "American Base Washington"
+ AMB_conservatism_i_def:1 "The American Base "Washington""
+ 
+ 
+ 
+ 
+ SMB_neutrality:1 "Abandoned Outpost Vostok"
+ SMB_neutrality_def:1 "Abandoned Outpost Vostok"
+ SMB_communism:1 "Outpost Vostok"
+ SMB_communism_def:1 "Outpost Vostok"
+ 
+ SMU_communism:1 "United Martian Soviet Republics"
+ SMU_communism_def:1 "The United Martian Soviet Republics"
+ 
+ SAB_communism:1 "Red Army Defectors"
+ SAB_communism_def:1 "The Red Army Defectors"
+ PVB_independence:1 "Provisional Vostok Government"
+ PVB_independence_def:1 "The Provisional Vostok Government"
+ 
+ 
+ 
+ 
+ CMB_socialism_i:1 "Canadian Colony Ottawa"
+ CMB_socialism_i_def:1 "The Canadian Colony Ottawa"
+ EUB_socialism_i:1 "Collaborative Allied Governments"
+ EUB_socialism_i_def:1 "The Collaborative Allied Governments"

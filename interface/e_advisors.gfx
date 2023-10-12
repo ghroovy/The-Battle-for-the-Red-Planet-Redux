@@ -1,0 +1,5 @@
+spriteTypes = {	
+	spriteType = {
+		name = "GFX_idea_generic_military_theorist"
+		texturefile = "gfx/interface/advisors/generic.dds"
+}

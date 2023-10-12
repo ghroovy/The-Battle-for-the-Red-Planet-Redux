@@ -1,0 +1,307 @@
+ideas = {
+
+	hidden_ideas = {
+		law_blank = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			ledger = civilian
+			
+			modifier = {
+				production_factory_efficiency_gain_factor = 100
+			}
+		}
+		#Political Parties
+		law_single_party_state = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			ledger = civilian
+			
+			modifier = {
+				production_factory_efficiency_gain_factor = 100
+			}
+		}
+		law_dominant_party_state = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			ledger = civilian
+			
+			modifier = {
+				production_factory_efficiency_gain_factor = 100
+			}
+		}
+		law_bipartisan_system = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			ledger = civilian
+			
+			modifier = {
+				production_factory_efficiency_gain_factor = 100
+			}
+		}
+		law_multi_party_system = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			ledger = civilian
+			
+			modifier = {
+				production_factory_efficiency_gain_factor = 50
+			}
+		}
+		law_no_political_parties = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			ledger = civilian
+			
+			modifier = {
+				production_factory_efficiency_gain_factor = 50
+			}
+		}
+		#Political Suffrage
+		law_absent_voting_systems = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			ledger = civilian
+			
+			modifier = {
+				production_factory_efficiency_gain_factor = 100
+			}
+		}
+		law_appointed_politicians = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			ledger = civilian
+			
+			modifier = {
+				production_factory_efficiency_gain_factor = 100
+			}
+		}
+		law_electoral_college = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			ledger = civilian
+			
+			modifier = {
+				production_factory_efficiency_gain_factor = 50
+			}
+		}
+		law_non_marginalized_suffrage = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			ledger = civilian
+			
+			modifier = {
+				production_factory_efficiency_gain_factor = 50
+			}
+		}
+		law_universal_suffrage = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			ledger = civilian
+			
+			modifier = {
+				production_factory_efficiency_gain_factor = 50
+			}
+		}
+		#Religious Rights
+		law_state_religion = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			ledger = civilian
+			
+			modifier = {
+				production_factory_efficiency_gain_factor = 100
+			}
+		}
+		law_religious_hegemony = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			ledger = civilian
+			
+			modifier = {
+				production_factory_efficiency_gain_factor = 50
+			}
+		}
+		law_freedom_of_religion = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			ledger = civilian
+			
+			modifier = {
+				production_factory_efficiency_gain_factor = 50
+			}
+		}
+		law_secular_state = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			ledger = civilian
+			
+			modifier = {
+				production_factory_efficiency_gain_factor = 50
+			}
+		}
+		law_state_atheism = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			ledger = civilian
+			
+			modifier = {
+				production_factory_efficiency_gain_factor = 50
+			}
+		}
+		#Citizen Rights
+		law_ethnostate = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			ledger = civilian
+			
+			modifier = {
+				stability_factor = 0.1
+				political_power_gain = 0.5
+				war_support_factor = 0.2
+				no_compliance_gain = 1
+				resistance_decay_on_our_occupied_states = -0.25
+			}
+		}
+		law_forced_assimilation = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			ledger = civilian
+			
+			modifier = {
+				compliance_growth_on_our_occupied_states = -0.25
+				resistance_growth_on_our_occupied_states = -0.25
+			}
+		}
+		law_segregation = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			ledger = civilian
+			
+			modifier = {
+				production_factory_efficiency_gain_factor = 100
+			}
+		}
+		law_racial_hegemony = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			ledger = civilian
+			
+			modifier = {
+				production_factory_efficiency_gain_factor = 100
+			}
+		}
+		law_multiculturalism = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			ledger = civilian
+			
+			modifier = {
+				stability_factor = 0.3
+				required_garrison_factor = -0.5
+				compliance_growth_on_our_occupied_states = 0.25
+				resistance_decay_on_our_occupied_states = 0.25
+			}
+		}
+		#Press Rights
+		law_state_press = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			ledger = civilian
+			
+			modifier = {
+				agency_upgrade_time = -0.5
+				foreign_subversive_activites = -0.3
+				drift_defence_factor = 0.5
+			}
+		}
+		law_state_funded_media = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			ledger = civilian
+			
+			modifier = {
+				drift_defence_factor = 0.35
+			}
+		}
+		law_censorship = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			ledger = civilian
+			
+			modifier = {
+				drift_defence_factor = 0.1
+			}
+		}
+		law_free_speech = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			ledger = civilian
+			
+			modifier = {
+				stability_factor = 10
+			}
+		}
+		law_defunct_press = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			ledger = civilian
+			
+			modifier = {
+				drift_defence_factor = -0.5
+			}
+		}
+	}
+
+}

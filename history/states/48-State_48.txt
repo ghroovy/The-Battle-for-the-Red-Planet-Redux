@@ -1,0 +1,20 @@
+state={
+	id=48
+	name="STATE_48"
+	provinces={
+		1192 2290 2398 3437 4052 4581 5096 5304 7962 8046 8997 
+	}
+	manpower = 100000
+    buildings_max_level_factor=1.000
+    state_category = megalopolis
+    resources = {
+		steel = 5
+	}
+	history=
+    {
+        owner=CMB
+        add_core_of = CMB
+		victory_points = { 8997 50 }
+    }
+
+}

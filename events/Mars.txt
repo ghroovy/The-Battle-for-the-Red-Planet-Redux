@@ -1,0 +1,90 @@
+﻿add_namespace = mars
+add_namespace = exo
+##INTRO
+
+country_event = { #Intro
+	id = mars.420
+	title = mars.420.t
+	desc = mars.420.d
+	
+	fire_only_once = yes
+	   mean_time_to_happen = {
+        days = 1
+    }
+
+	
+	trigger = {
+			original_tag = SMB
+			date > 2020.1.1
+		}
+	option = {
+		name = mars.420.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+
+###SOVIET
+country_event = { #Lenin spawn
+	id = mars.1
+	title = mars.1.t
+	desc = mars.1.d
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mars.1.a
+		ai_chance = { factor = 100 }
+		custom_effect_tooltip = smb_lenin_awakens_tooltip
+	}
+}
+
+
+country_event = { #Krasnyy Focus
+	id = mars.2
+	title = mars.2.t
+	desc = mars.2.d
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mars.2.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = { #Soviet Industry Focus #1
+	id = mars.3
+	title = mars.3.t
+	desc = mars.3.d
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mars.3.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = { # Soviet exo research focus
+	id = exo.1
+	title = exo.1.t
+	desc = exo.1.d	
+
+	is_triggered_only = yes
+	
+	option = { #quality
+		name = exo.1.a 
+		hidden_effect = {
+			complete_national_focus = smb_exo_quality
+		}
+	}
+	
+	option = { #quantity
+		name = exo.1.a1
+		hidden_effect = {
+			complete_national_focus = smb_exo_quantity
+		}
+	}
+	
+}

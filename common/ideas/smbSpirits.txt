@@ -1,0 +1,249 @@
+ideas = {
+	country = {
+		smb_irongrip = {
+			modifier = {
+				resistance_growth = -0.1
+				offence = 0.1
+				war_support_factor = 0.25
+			}
+		}
+		
+		smb_guidinghand = {
+			modifier = {
+				compliance_growth = 0.1
+				defence = 0.1
+				stability_factor = 0.25
+			}
+		}
+		
+		smb_scavengesupplies = {
+			modifier = {
+				consumer_goods_factor = 0.05
+			}
+		}
+		
+		smb_respectdead = {
+			modifier = {
+				stability_factor = 0.1
+				compliance_growth = 0.1
+				experience_gain_army_unit_factor = 0.1
+				army_org_regain = 0.1
+				army_morale_factor = 0.2
+			}
+		}
+		
+		smb_usedead = {
+			modifier = {
+				conscription_factor = 0.90
+				stability_factor = -0.10
+				resistance_decay_on_our_occupied_states = 0.1
+				monthly_population = -2.0
+				attack = -0.05
+				defence = -0.05
+				attrition = -0.10
+				experience_gain_army_unit_factor  = -0.7
+				army_org_regain = -0.1
+				army_morale_factor = -0.1
+			}
+		}
+		
+		smb_goodmeals = {
+			modifier = {
+				supply_consumption_factor = 0.1
+				defence = 0.1
+				stability_factor = 0.1
+				consumer_goods_factor = 0.10
+				army_morale_factor = 0.1
+				army_org_factor = 0.1
+			}
+		}
+		
+		smb_combatstimulants = {
+			modifier = {
+				supply_consumption_factor = 0.15
+				offence = 0.1
+				stability_factor = -0.15
+				consumer_goods_factor = 0.10
+				army_speed_factor = 0.1
+			}
+		}
+		
+		smb_automated_farms = {
+			modifier = {
+				monthly_population = 1.0
+				base_fuel_gain_factor = 0.05
+				supply_consumption_factor = -0.05
+				consumer_goods_factor = 0.05
+			}
+		}
+		
+		smb_roads_railways = {
+			modifier = {
+				supply_consumption_factor = -0.15
+				production_speed_infrastructure_factor = 0.20
+				repair_speed_infrastructure_factor = 0.10
+			}
+		}
+		
+		smb_decree_workers = {
+			modifier = {
+				industrial_capacity_factory = 0.1
+				consumer_goods_factor = 0.05
+				production_speed_buildings_factor = 0.1 
+				line_change_production_efficiency_factor = 0.1
+			}
+		}
+		
+		
+		smb_let_them_work = {
+			modifier = {
+				industrial_capacity_factory = 0.05
+			}
+		}
+		
+		smb_even_to_death = {
+			modifier = {
+				industrial_capacity_factory = 0.05
+				monthly_population = -0.05
+			}
+		}
+		
+		smb_restless = {
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.2 
+				production_factory_max_efficiency_factor = -0.2
+			}
+		}
+		
+		smb_zombies_to_work = {
+			modifier = {
+				production_factory_efficiency_gain_factor = -0.7
+				industrial_capacity_factory = 0.25
+			}
+		}
+		
+		smb_serfs = { 
+			modifier = {
+				industrial_capacity_factory = 0.10
+			}
+		}
+		
+		smb_drug_workforce = { 
+			modifier = {
+				consumer_goods_factor = 0.15
+				industrial_capacity_factory = 0.10
+			}
+		}
+		
+		smb_expanding = {
+			modifier = {
+				consumer_goods_factor = 0.5
+				industrial_capacity_factory = -0.5
+				weekly_manpower = 5000
+				monthly_population = 200
+			}
+		}
+		
+		smb_pound_enemy = {
+			modifier = {
+				army_artillery_attack_factor = 0.15
+			}
+		}
+		
+		smb_streamlined_suits = {
+			modifier = {
+				army_speed_factor = 0.2
+			}
+		}
+		
+		smb_adapt_suits = {
+			equipment_bonus = {
+				infantry_equipment = { instant = yes 
+					build_cost_ic = -0.05
+					reliability = 0.05
+				}
+			}
+		}
+		
+		smb_finish_training = {
+			modifier = {
+				army_org_factor = 0.10
+			}
+		}
+		
+		smb_soldier_clean = {
+			modifier = {
+				army_org_factor = 0.10
+				army_morale_factor = 0.10
+			}
+		}
+		
+		smb_soldier_drugs = {
+			modifier = {
+				army_morale_factor = -0.05
+				army_org_factor = -0.05
+				army_defence_factor = -0.05
+				army_attack_factor = 0.10
+				army_speed_factor = 0.10
+			}
+		}
+		
+		smb_exo_quality1 = {
+			equipment_bonus = {
+				exoskeleton_equipment = { 
+					build_cost_ic = 0.20
+					reliability = 0.10
+					soft_attack = 0.1
+					hard_attack = 0.05
+					hardness = 0.05
+					instant = yes 
+				}
+			}
+		}
+		
+		smb_exo_quality2 = {
+			equipment_bonus = {
+				exoskeleton_equipment = { 
+					build_cost_ic = 0.25
+					reliability = 0.15
+					soft_attack = 0.1
+					hard_attack = 0.05
+					hardness = 0.05
+					instant = yes 
+				}
+			}
+		}
+		
+		smb_exo_quantity = {
+			equipment_bonus = {
+				exoskeleton_equipment = { instant = yes 
+					build_cost_ic = -0.10
+					reliability = -0.10
+					soft_attack = -0.10
+					hard_attack = -0.05
+					hardness = -0.05
+				}
+			}
+		}
+		
+		smb_exo_stronger = {
+			equipment_bonus = {
+				exoskeleton_equipment = { instant = yes 
+					build_cost_ic = 0.10
+					maximum_speed = -0.2
+					defense = 0.2
+				}
+			}
+		}
+		
+		smb_exo_faster = {
+			equipment_bonus = {
+				exoskeleton_equipment = { instant = yes 
+					build_cost_ic = 0.10
+					maximum_speed = 0.2
+					defense = -0.2
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,16 @@
+state={
+	id=227
+	name="STATE_227"
+	provinces={
+		1320 2042 2619 3160 3238 3364 3606 4570 4993 5091 5163 5250 5749 5820 6222 6319 6999 7043 7228 7667 8000 8286 8555 8623 8639 8760 9930 9978 9993 10023 10046 10052 10074 10085 10128 10174 
+	}
+	manpower = 100
+    buildings_max_level_factor=1.000
+    state_category = town
+    history=
+    {
+        owner=WST
+        add_core_of = WST
+    }
+
+}

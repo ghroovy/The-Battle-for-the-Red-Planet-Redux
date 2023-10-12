@@ -1,0 +1,86 @@
+spriteTypes = {
+
+
+
+#GENERIC
+
+	spriteType = {
+		name = "GFX_idea_wst_wasteland"
+		texturefile = "gfx/interface/ideas/wst_wasteland.dds"
+	}		
+	spriteType = {
+		name = "GFX_idea_martian_recruiting"
+		texturefile = "gfx/interface/ideas/martian_recruiting.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_generic_colonization"
+		texturefile = "gfx/interface/ideas/generic_colonization.dds"
+	}
+
+
+#SOVIET
+
+	spriteType = {
+		name = "GFX_idea_officer_purge"
+		texturefile = "gfx/interface/ideas/smb_officer_purge.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_leader_purge"
+		texturefile = "gfx/interface/ideas/smb_leader_purge.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_scientist_purge"
+		texturefile = "gfx/interface/ideas/smb_scientist_purge.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_new_officers_modifier"	
+		texturefile = "gfx/interface/ideas/smb_new_officers_modifier.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_new_scientists_modifier"	
+		texturefile = "gfx/interface/ideas/smb_new_scientists_modifier.dds"
+	}
+
+
+	spriteType = {
+		name = "GFX_idea_smb_irongrip"
+		texturefile = "gfx/interface/ideas/smb_irongrip.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_smb_guidinghand"
+		texturefile = "gfx/interface/ideas/smb_guidinghand.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_smb_scavengesupplies"
+		texturefile = "gfx/interface/ideas/smb_scavengesupplies.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_smb_respectdead"
+		texturefile = "gfx/interface/ideas/smb_respectdead.dds"
+	}
+	
+	
+	
+	
+	spriteType = {
+		name = "GFX_idea_smb_usedead"
+		texturefile = "gfx/interface/ideas/smb_usedead.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_smb_exo_quality1"
+		texturefile = "gfx/interface/ideas/smb_exo_quality1.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_smb_exo_quality2"
+		texturefile = "gfx/interface/ideas/smb_exo_quality2.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_smb_exo_stronger"
+		texturefile = "gfx/interface/ideas/smb_exo_stronger.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_smb_exo_faster"
+		texturefile = "gfx/interface/ideas/smb_exo_faster.dds"
+	}
+}

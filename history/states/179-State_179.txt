@@ -1,0 +1,16 @@
+state={
+	id=179
+	name="STATE_179"
+	provinces={
+		27 871 1009 2549 3232 3498 4074 4441 4494 5718 6139 6559 7394 7595 8718 8908 9780 9796 9828 
+	}
+	manpower = 100
+    buildings_max_level_factor=1.000
+    state_category = town
+    history=
+    {
+        owner=WST
+        add_core_of = WST
+    }
+
+}

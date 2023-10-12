@@ -1,0 +1,17 @@
+state={
+	id=50
+	name="STATE_50"
+	provinces={
+		231 288 468 469 580 742 766 1267 1308 1690 2531 2535 2700 2735 3497 3570 3852 3883 4877 5358 5584 5921 6149 6415 7767 7987 8360 9002 9217 9230 9259 9269 9304 
+	}
+	manpower = 100
+    buildings_max_level_factor=1.000
+    state_category = town
+	impassable = yes
+    history=
+    {
+        owner=WST
+        add_core_of = WST
+    }
+
+}

@@ -1,0 +1,73 @@
+﻿capital = 124
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	tech_support = 1
+	tech_recon = 1
+	support_weapons = 1
+	gw_artillery = 1
+}
+
+set_convoys = 0
+
+1939.1.1 = {
+	set_technology = {
+		infantry_weapons = 1
+		tech_support = 1
+		tech_recon = 1
+		support_weapons = 1
+		gw_artillery = 1
+	}
+}
+
+
+set_politics = {
+	ruling_party = national_socialism
+	last_election = "2020.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	national_socialism = 80
+	fascism = 10
+	ultranationalism = 10
+}
+
+create_country_leader = {
+	name = "Captain Ernst Engel"
+	desc = ""
+	picture = "gfx/leaders/GMB/Ernst.dds"
+	ideology = nazism
+	
+	traits = {
+		nationalist_symbol
+		cornered_fox
+		anti_communist
+		anti_democrat
+	}
+}
+
+1939.1.1 = {
+	set_politics = {
+		ruling_party = national_socialism
+		last_election = "1936.1.1"
+		election_frequency = 48
+		elections_allowed = no
+	}
+	set_popularities = {
+		national_socialism = 80
+		fascism = 10
+		ultranationalism = 10
+	}
+}
+
+add_ideas = {
+	martian_recruiting
+}
+
+add_opinion_modifier = { target = AMB modifier = hostile_status }	
+add_opinion_modifier = { target = SMB modifier = hostile_status }
+add_opinion_modifier = { target = EUB modifier = hostile_status }
+add_opinion_modifier = { target = CMB modifier = hostile_status }

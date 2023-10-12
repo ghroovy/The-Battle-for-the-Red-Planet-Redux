@@ -1,0 +1,27 @@
+state={
+	id=124
+	name="German Base Alpha"
+	provinces={
+		227 531 553 671 809 1804 1850 1990 2115 2138 2547 2992 3395 3765 3982 4206 4317 4798 5056 5560 6077 6293 6307 7710 7899 9485 9547 9562 9583 9606 9648 9678 9688 
+	}
+	manpower = 100000
+    buildings_max_level_factor=1.000
+    state_category = megalopolis
+	
+	resources={
+		steel=5
+	}
+	
+    history=
+    {
+        owner=GMB
+        add_core_of = GMB
+		victory_points = { 6307 50 }
+		victory_points = { 4206 30 }
+		buildings = {
+			industrial_complex = 5
+			arms_factory = 2
+			infrastructure = 2
+		}
+    }
+}

@@ -1,0 +1,5 @@
+﻿l_english:
+ mars_colonization:0 "Colonize Mars"
+ mars_colonization_desc:0 "How colonization works:\n\nOnce you have enough political power, click the colonize button. This will start a \"war\" with the martian landscape. Any states fully controlled by your divisions by the end of 30 days will become your states.\nThe decision will re-enable in 180 days after each use"
+ colonize:0 "Colonize"
+ colonize_desc:0 "Our troops will colonize mars further"

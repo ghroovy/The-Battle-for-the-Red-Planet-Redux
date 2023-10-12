@@ -1,0 +1,23 @@
+scripted_gui = {
+	smb_purge_decision_ui = {
+		context_type = decision_category
+		window_name = "smb_purge_decision_ui_window"
+
+		properties = {
+			army_icon = {
+				frame = current_army_icon_frame
+			}
+		}
+		properties = {
+			dissenter_icon = {
+				frame = current_dissenter_icon_frame
+			}
+		}
+		properties = {
+			science_icon = {
+				frame = current_science_icon_frame
+			}
+		}
+	}
+}
+

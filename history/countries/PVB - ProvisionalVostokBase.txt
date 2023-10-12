@@ -1,0 +1,56 @@
+﻿capital = 520
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	tech_support = 1
+	tech_recon = 1
+	support_weapons = 1
+	gw_artillery = 1
+}
+
+set_convoys = 0
+
+1939.1.1 = {
+	set_technology = {
+		infantry_weapons = 1
+		tech_support = 1
+		tech_recon = 1
+		support_weapons = 1
+		gw_artillery = 1
+	}
+}
+
+
+set_politics = {
+	ruling_party = independence
+	last_election = "2020.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	independence = 100
+}
+
+
+1939.1.1 = {
+	set_politics = {
+		ruling_party = independence
+		last_election = "1936.1.1"
+		election_frequency = 48
+		elections_allowed = no
+	}
+	set_popularities = {
+		independence = 100
+	}
+}
+add_ideas = {
+  martian_recruiting
+}
+
+add_opinion_modifier = { target = AMB modifier = hostile_status }	
+add_opinion_modifier = { target = GMB modifier = hostile_status }
+add_opinion_modifier = { target = EUB modifier = hostile_status }
+add_opinion_modifier = { target = CMB modifier = hostile_status }
+add_opinion_modifier = { target = SMB modifier = hostile_status }

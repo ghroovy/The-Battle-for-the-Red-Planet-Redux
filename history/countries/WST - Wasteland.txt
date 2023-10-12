@@ -1,0 +1,57 @@
+﻿capital = 287
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 0
+	tech_support = 0
+	tech_recon = 0
+	support_weapons = 0
+	gw_artillery = 0
+
+	#doctrines
+	air_superiority = 0
+	grand_battle_plan = 0
+	trench_warfare = 0
+	fleet_in_being = 0
+	battlefleet_concentration = 0
+	convoy_sailing = 0
+
+	#electronics
+	electronic_mechanical_engineering = 0
+	radio = 0
+	radio_detection = 0
+	mechanical_computing = 0
+	computing_machine = 0
+
+	#industry
+	basic_machine_tools = 0
+	improved_machine_tools = 0
+	advanced_machine_tools = 0
+	construction1 = 0
+	construction2 = 0
+	dispersed_industry = 0
+	dispersed_industry2 = 0
+}
+
+set_convoys = 0
+
+set_popularities = {
+	neutrality = 100
+}
+
+create_country_leader = {
+	name = "Wasteland"
+	desc = ""
+	picture = "gfx/leaders/WST/mars.dds"
+	ideology = anarchism
+	
+	traits = {
+		#
+	}
+}
+
+add_ideas = {
+  wst_wasteland
+  closed_economy
+  disarmed_nation
+}

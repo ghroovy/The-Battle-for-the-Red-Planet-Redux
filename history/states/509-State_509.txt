@@ -1,0 +1,15 @@
+state={
+	id=509
+	name="STATE_509"
+	provinces={
+		681 1876 3253 3449 4017 4135 4149 4282 5395 5555 5858 6095 8290 9039 11270 11286 11288 11310 11311 
+	}
+	manpower = 100
+    buildings_max_level_factor=1.000
+    state_category = town
+    history=
+    {
+        owner=WST
+        add_core_of = WST
+    }
+}

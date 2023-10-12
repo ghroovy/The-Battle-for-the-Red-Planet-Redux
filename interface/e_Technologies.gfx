@@ -1,0 +1,68 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_exoskeletons_medium"
+		texturefile = "gfx/interface/technologies/exoskeletons.dds"
+	}
+	
+	
+	
+	#American
+	spriteType = {
+		name = "GFX_AMB_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/AMB_infantry_equipment_0.dds"
+	}
+	spriteType = {
+		name = "GFX_AMB_infantry_weapons1_medium"
+		texturefile = "gfx/interface/technologies/AMB_infantry_equipment_1.dds"
+	}
+	spriteType = {
+		name = "GFX_AMB_improved_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/AMB_infantry_equipment_2.dds"
+	}
+	spriteType = {
+		name = "GFX_AMB_advanced_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/AMB_infantry_equipment_3.dds"
+	}
+	
+	
+	#German
+	
+	spriteType = {
+		name = "GFX_GMB_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/GMB_infantry_equipment_0.dds"
+	}
+	spriteType = {
+		name = "GFX_GMB_infantry_weapons1_medium"
+		texturefile = "gfx/interface/technologies/GMB_infantry_equipment_1.dds"
+	}
+	spriteType = {
+		name = "GFX_GMB_improved_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/GMB_infantry_equipment_2.dds"
+	}
+	spriteType = {
+		name = "GFX_GMB_advanced_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/GMB_infantry_equipment_3.dds"
+	}
+	
+	
+	
+	#Soviet
+	
+	spriteType = {
+		name = "GFX_SMB_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/SMB_infantry_equipment_0.dds"
+	}
+	spriteType = {
+		name = "GFX_SMB_infantry_weapons1_medium"
+		texturefile = "gfx/interface/technologies/SMB_infantry_equipment_1.dds"
+	}
+	spriteType = {
+		name = "GFX_SMB_improved_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/SMB_infantry_equipment_2.dds"
+	}
+	spriteType = {
+		name = "GFX_SMB_advanced_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/SMB_infantry_equipment_3.dds"
+	}
+}

@@ -1,0 +1,11 @@
+﻿l_english:
+ exoskeleton_equipment_0:0 "Exoskeleton"
+ exoskeleton_equipment_desc:0 "Corpse powered exoskeleton fighting machine"
+ SMB_infantry_equipment_0:0 "AK74"
+ SMB_infantry_equipment_0_short:0 "AK74"
+ SMB_infantry_equipment_1:0 "AK12"
+ SMB_infantry_equipment_1_short:0 "AK12"
+ 
+ 
+ GMB_infantry_equipment_0:1 "HK416"
+ GMB_infantry_equipment_0_short:1 "HK416"

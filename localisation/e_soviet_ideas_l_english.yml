@@ -1,0 +1,28 @@
+﻿l_english:
+
+ #NatSpirits
+ smb_guidinghand:0 "The Guiding Hand"
+ smb_guidinghand_desc:0 "Protokol Krasnyy will lead Vostok like a loving father caring for his sons."
+ smb_irongrip:0 "The Reign of Terror"
+ smb_irongrip_desc:0 "There is no time for compassion. Protokol Krasnyy will lead, and the people will follow.\n\n§ROr else.§!"
+ smb_scavengesupplies:0 "Scavenging for supplies"
+ smb_scavengesupplies_desc:0 "More manpower is focused on scavenging more supplies, and our production capacity has tanked"
+ 
+ #purge stuff
+ smb_leader_purge:0 "Purged Leadership"
+ smb_science_purge:0 "Purged Intellectuals"
+ smb_officer_purge:0 "Purged Officers"
+ smb_new_officers_modifier:0 "Rehabilitated Officers"
+ smb_new_scientists_modifier:0 "Socialist Science"
+ 
+ #exo stuff
+ smb_usedead:0 "Use the Dead"
+ smb_usedead_desc:0 "Our dead are being re-used for exoskeleton research and fitting."
+ smb_exo_quality1:0 "Quality focused research - §GStage 1§!"
+ smb_exo_quality1_desc:0 "We have decided that Quality is indeed better than quantity, and research is well underway."
+ smb_exo_quality2:0 "Quality focused research - §GStage 2§!"
+ smb_exo_quality2_desc:0 "With the addition of a more refined material, the quality of our prototypes have increased."
+ 
+ #human stuff
+ smb_respectdead:0 "Focus on Humans"
+ smb_respectdead:0 "Instead of the alternative Krasnyy has decided to focus on improving our human forces"

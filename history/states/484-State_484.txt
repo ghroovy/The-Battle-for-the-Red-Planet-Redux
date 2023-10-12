@@ -1,0 +1,16 @@
+state={
+	id=484
+	name="STATE_484"
+	provinces={
+		647 1776 3846 3880 4181 4515 4664 4720 4813 4814 5797 6957 6981 7164 7560 7706 8346 11195 11245 11255 
+	}
+	manpower = 100
+    buildings_max_level_factor=1.000
+    state_category = town
+    history=
+    {
+        owner=WST
+        add_core_of = WST
+    }
+
+}

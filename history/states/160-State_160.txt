@@ -1,0 +1,16 @@
+state={
+	id=160
+	name="STATE_160"
+	provinces={
+		595 1487 1688 2324 2737 3556 3637 3742 3756 4307 4328 4450 4553 5287 5337 5735 6057 6448 6773 7624 7810 8140 9646 9708 9736 9759 9771 9784 9810 9811 9859 
+	}
+	manpower = 100
+    buildings_max_level_factor=1.000
+    state_category = town
+    history=
+    {
+        owner=WST
+        add_core_of = WST
+    }
+
+}

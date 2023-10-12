@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_category_image_mars"
+		texturefile = "gfx/interface/decisions/category_image_mars.dds"
+	}
+}

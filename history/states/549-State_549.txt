@@ -1,0 +1,21 @@
+state={
+	id=549
+	name="Outpost Vostok"
+	provinces={
+		375 1859 6870 11369 
+	}
+	manpower = 100000
+    buildings_max_level_factor=1.000
+    state_category = megalopolis
+	
+	resources={
+		steel=5
+	}
+	
+    history=
+    {
+        owner=SMB
+        add_core_of = SMB
+		victory_points = { 6870 50 }
+    }
+}

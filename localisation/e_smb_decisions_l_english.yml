@@ -1,0 +1,46 @@
+﻿l_english:
+ SMB_purge:0 "§RThe Great Purge§!"
+ smb_purge_desc:0 "The current circumstances in Vostok has unfortunately forced §YProtokol: Krasnyy's§! hand to enact a §RSecond Great Purge§!, reminiscent of the days of Joseph Stalin. In order to save the Union from collapse, those threatening to end it must be §Reliminated§!. This would have us lose important intellectuals, geniuses, and leaders, but it is all worth it to save the Union."
+ 
+ 
+ SMB_purge_dissenter_header:0 "§RDissenter threat§!"
+ smb_purge_dissenter_threat_amount:0 "[?SMB.dissenter_threat] / 100"
+ 
+ SMB_purge_army_header:0 "§RArmy threat§!"
+ smb_purge_army_threat_amount:0 "[?SMB.army_threat] / 100"
+ 
+ SMB_purge_science_header:0 "§RScientist threat§!"
+ smb_purge_science_threat_amount:0 "[?SMB.science_threat] / 100"
+ 
+ 
+ 
+ SMB_coerce_officers:0 "Coerce Officers"
+ purge_officers_5:0 "lowering army threat by 5"
+ purge_officers_10:0 "lowering army threat by 10"
+ purge_officers_15:0 "lowering army threat by 15"
+ 
+ SMB_purge_officers:0 "Purge Officers"
+ SMB_purge_officers_tooltip:0 "§RThis will greatly lower the army threat in the short run, but greatly hurt our military in the long run.§!"
+ 
+ 
+ 
+ SMB_mass_arrests:0 "Carry out Mass Arrests"
+ mass_arrest_5:0 "lowering dissenter threat by 5"
+ mass_arrest_10:0 "lowering dissenter threat by 10"
+ mass_arrest_15:0 "lowering dissenter threat by 15"
+ 
+ SMB_political_purge:0 "Purge Politicians"
+ SMB_purge_leaders_tooltip:0 "§RThis will greatly lower the dissident threat in the short run, but greatly hurt our administration in the long run.§!"
+ 
+ 
+ 
+ SMB_brain_drain:0 "Interrogate and Persuade intellectuals"
+ brain_drain_5:0 "lowering science threat by 5"
+ brain_drain_10:0 "lowering science threat by 10"
+ brain_drain_15:0 "lowering science threat by 15"
+ 
+ SMB_purge_intellectuals:0 "Purge Intellectuals"
+ SMB_purge_intellectuals_tooltip:0 "§RThis will greatly lower the scientist threat in the short run, but greatly hurt our research in the long run.§!"
+ 
+ SMB_revolt: "§RThe Revolt§!"
+ SMB_revolt_tooltip:0 "§RThe Union will fall, and the revolution extinguished.§!"

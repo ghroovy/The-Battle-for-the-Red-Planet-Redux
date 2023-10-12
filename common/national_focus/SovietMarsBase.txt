@@ -1,0 +1,2664 @@
+search_filter_prios = {
+	FOCUS_FILTER_POLITICAL = 1010
+
+	
+ 
+	
+	
+	FOCUS_FILTER_RESEARCH = 522
+
+	
+	FOCUS_FILTER_INDUSTRY = 509
+
+}
+
+focus_tree = {
+	id = smb_focus
+	
+	continuous_focus_position = { x = 1500 y = 1000 }
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 1
+			tag = smb
+		}
+	}
+	
+	reset_on_civilwar = no
+
+	initial_show_position = {
+		focus = industrial_effort
+	}
+	
+	
+	
+	focus = {
+		id = smb_start_the_war
+		icon = GFX_goal_generic_start_war
+		available = { 
+			date > 2024.1.2
+		}
+
+		continue_if_invalid = yes
+				
+		x = 3
+		y = 1
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		custom_effect_tooltip = smb_start_war_tooltip
+			hidden_effect = {
+			declare_war_on = { target = WST  type = annex_everything }
+			}
+		}
+	}
+	
+	focus = {
+		id = smb_open_doors
+		icon = GFX_goal_smb_open_doors
+		
+		continue_if_invalid = yes
+				
+		x = 7
+		y = 0
+		cost = 1
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+		custom_effect_tooltip = smb_bunker_open_tooltip
+		}
+	}
+	
+	focus = {
+		id = smb_turn_on_power
+		icon = GFX_goal_smb_turn_on_power
+		
+		
+		prerequisite = {
+			focus = smb_open_doors
+		}
+		
+		continue_if_invalid = yes
+				
+		x = 0
+		y = 1
+		
+		relative_position_id = smb_open_doors
+		
+		cost = 1
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+		custom_effect_tooltip = smb_power_on_tooltip
+		}
+	}
+	
+	focus = {
+		id = smb_the_computer
+		icon = GFX_goal_smb_the_computer
+		
+		
+		prerequisite = {
+			focus = smb_turn_on_power
+		}
+		
+		continue_if_invalid = yes
+				
+		x = 0
+		y = 1
+		relative_position_id = smb_turn_on_power
+		cost = 1
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+		custom_effect_tooltip = smb_lenin_time_tooltip
+			hidden_effect = {
+				create_field_marshal = {
+					name = "Protokol Krasnyy"
+					gfx = "GFX_Portrait_SMB_lenin_animated"
+					attack_skill = 4
+					defense_skill = 4
+					planning_skill = 4
+					logistics_skill = 4
+					traits = {  }	
+				}
+				country_event = { id = mars.1 }
+				set_country_flag = SMB_intro
+                mark_focus_tree_layout_dirty = yes
+				add_popularity = {
+					ideology = communism
+					popularity = 0.8
+				}
+				
+				set_war_support = 0.5
+				set_stability = 0.5
+				
+				set_politics = {
+					ruling_party = communism
+					elections_allowed = no
+				}
+				remove_ideas = wst_wasteland
+				add_threat = 10
+				add_ideas = { martian_recruiting }
+			}
+		}
+	}
+	
+	######### Past Intro
+	
+	focus = {
+		id = smb_protokol_krasnyy
+		icon = GFX_goal_smb_protokol_krasnyy
+		available = { 
+			has_country_flag = SMB_intro
+		}
+		
+		allow_branch = {
+            hidden_trigger = {
+                has_country_flag = SMB_intro
+            }
+        }
+		
+		continue_if_invalid = yes
+				
+		x = 0
+		y = 1
+		relative_position_id = smb_the_computer
+		cost = 5
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			custom_effect_tooltip = smb_lenin_intro_tooltip
+			hidden_effect = {
+				country_event = mars.2
+			}
+		}
+	}
+	
+	focus = {
+		id = smb_guiding_hand
+		icon = GFX_goal_smb_guiding_hand
+		available = { 
+			has_country_flag = SMB_intro
+		}
+
+		prerequisite = {
+			focus = smb_protokol_krasnyy
+		}
+
+		mutually_exclusive = {
+			focus = smb_iron_grip
+		}
+		
+		allow_branch = {
+            hidden_trigger = {
+                has_country_flag = SMB_intro
+            }
+        }
+		
+		continue_if_invalid = yes
+				
+		x = -1
+		y = 1
+		relative_position_id = smb_protokol_krasnyy
+		cost = 5
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = { smb_guidinghand }
+		}
+	}
+	
+	
+	focus = {
+		id = smb_iron_grip
+		icon = GFX_goal_smb_iron_grip
+		available = { 
+			has_country_flag = SMB_intro
+		}
+		
+		prerequisite = {
+			focus = smb_protokol_krasnyy
+		}
+		
+		mutually_exclusive = {
+			focus = smb_guiding_hand
+		}
+		
+		allow_branch = {
+            hidden_trigger = {
+                has_country_flag = SMB_intro
+            }
+        }
+		
+		continue_if_invalid = yes
+				
+		x = 1
+		y = 1
+		relative_position_id = smb_protokol_krasnyy
+		cost = 5
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = { smb_irongrip }
+			hidden_effect = {
+				set_country_flag = SMB_iron_grip
+				mark_focus_tree_layout_dirty = yes
+				
+				set_variable = {
+					var = smb_purged_scientists
+					value = 0
+				}
+				
+				set_variable = {
+					var = army_threat
+					value = 100
+				}
+				set_variable = {
+					var = current_army_icon_frame
+					value = 11
+				}
+				
+				set_variable = {
+					var = dissenter_threat
+					value = 100
+				}
+				set_variable = {
+					var = current_dissenter_icon_frame
+					value = 11
+				}
+				
+				set_variable = {
+					var = science_threat
+					value = 100
+				}
+				set_variable = {
+					var = current_science_icon_frame
+					value = 11
+				}
+				
+			}
+		}
+	}
+	
+	focus = {
+		id = smb_industry_online
+		icon = GFX_goal_smb_industry_online
+		available = { 
+			has_country_flag = SMB_intro
+		}
+		
+		prerequisite = {
+			focus = smb_find_survivors
+		}
+		
+		prerequisite = {
+			focus = smb_scavenge_supplies
+		}
+		
+		allow_branch = {
+            hidden_trigger = {
+                has_country_flag = SMB_intro
+            }
+        }
+		
+		continue_if_invalid = yes
+				
+		x = 0
+		y = 4
+		relative_position_id = smb_protokol_krasnyy
+		cost = 10
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			549 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 5
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+			
+			add_extra_state_shared_building_slots = 8
+			
+			hidden_effect = {
+				transfer_state = 500
+				WST = {
+					transfer_state = 500
+				}
+				country_event = mars.3
+			}
+		}
+	}
+	
+	focus = {
+		id = smb_scavenge_supplies
+		icon = GFX_goal_smb_scavenge_supplies
+		available = { 
+			has_country_flag = SMB_intro
+		}
+		
+		prerequisite = {
+			focus = smb_iron_grip
+			focus = smb_guiding_hand
+		}
+
+		allow_branch = {
+            hidden_trigger = {
+                has_country_flag = SMB_intro
+            }
+        }
+		
+		continue_if_invalid = yes
+				
+		x = 0
+		y = 1
+		relative_position_id = smb_guiding_hand
+		cost = 5
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_timed_idea = { idea = smb_scavengesupplies days = 30 }
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 500
+			}
+		}
+	}
+	
+	focus = {
+		id = smb_find_survivors
+		icon = GFX_goal_smb_find_survivors
+		available = { 
+			has_country_flag = SMB_intro
+		}
+		
+		prerequisite = {
+			focus = smb_iron_grip
+			focus = smb_guiding_hand
+		}
+		
+		allow_branch = {
+            hidden_trigger = {
+                has_country_flag = SMB_intro
+            }
+        }
+		
+		continue_if_invalid = yes
+				
+		x = 0
+		y = 1
+		relative_position_id = smb_iron_grip
+		cost = 5
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_manpower = 10000	
+		}
+	}
+	
+	
+	focus = {
+		id = smb_respect_dead
+		icon = GFX_goal_smb_respect_dead
+		available = { 
+			has_country_flag = SMB_intro
+		}
+		
+		prerequisite = {
+			focus = smb_scavenge_supplies
+		}
+		
+		prerequisite = {
+			focus = smb_find_survivors
+		}
+		
+		mutually_exclusive = {
+			focus = smb_use_dead
+		}
+		
+		allow_branch = {
+            hidden_trigger = {
+                has_country_flag = SMB_intro
+            }
+        }
+		
+		continue_if_invalid = yes
+				
+		x = 0
+		y = 1
+		relative_position_id = smb_scavenge_supplies
+		cost = 5
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			custom_effect_tooltip = smb_respect_dead_tooltip
+			army_experience = 30
+			hidden_effect = {
+				add_ideas = { smb_respectdead }
+				set_country_flag = SMB_using_human
+				mark_focus_tree_layout_dirty = yes
+			}
+		}
+	}
+	
+	
+	
+	focus = {
+		id = smb_reign_of_terror
+		icon = GFX_goal_smb_reign_of_terror
+		available = { 
+			has_country_flag = SMB_iron_grip
+		}
+
+
+		allow_branch = {
+            hidden_trigger = {
+                has_country_flag = SMB_iron_grip
+            }
+        }
+		
+		continue_if_invalid = yes
+				
+		x = 0
+		y = 1
+		relative_position_id = smb_industry_online
+		cost = 5
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			custom_effect_tooltip = SMB_reign_of_terror_start_tooltip
+		}
+	}
+	
+	focus = {
+		id = smb_great_purge
+		icon = GFX_goal_smb_great_purge
+		available = { 
+			has_country_flag = SMB_iron_grip
+		}
+
+		prerequisite = { 
+			focus = smb_reign_of_terror
+		}
+
+		allow_branch = {
+            hidden_trigger = {
+                has_country_flag = SMB_iron_grip
+            }
+        }
+		
+		continue_if_invalid = yes
+				
+		x = 0
+		y = 1
+		relative_position_id = smb_reign_of_terror
+		cost = 5
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			custom_effect_tooltip = smb_great_purge_tooltip
+			add_stability = -0.15
+			add_war_support = -0.3
+			hidden_effect = {
+				set_country_flag = SMB_purge_started
+				mark_focus_tree_layout_dirty = yes
+			}
+		}
+	}
+	
+	focus = {
+		id = smb_purge_army
+		icon = GFX_goal_smb_purge_army
+		available = { 
+			has_country_flag = SMB_iron_grip
+		}
+
+		prerequisite = { 
+			focus = smb_great_purge
+		}
+
+		allow_branch = {
+            hidden_trigger = {
+                has_country_flag = SMB_iron_grip
+            }
+        }
+		
+		continue_if_invalid = yes
+				
+		x = -2
+		y = 1
+		relative_position_id = smb_great_purge
+		cost = 5
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			custom_effect_tooltip = smb_armypurge_tooltip
+			hidden_effect = {
+				add_to_variable = {
+					var = army_threat
+					value = -25
+				}
+				country_event = { id = purge.1 }
+			}
+		}
+	}
+	
+	focus = {
+		id = smb_purge_dissenters
+		icon = GFX_goal_smb_purge_dissenters
+		available = { 
+			has_country_flag = SMB_iron_grip
+		}
+
+		prerequisite = { 
+			focus = smb_great_purge
+		}
+
+		allow_branch = {
+            hidden_trigger = {
+                has_country_flag = SMB_iron_grip
+            }
+        }
+		
+		continue_if_invalid = yes
+				
+		x = 0
+		y = 1
+		relative_position_id = smb_great_purge
+		cost = 5
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			custom_effect_tooltip = smb_dissentpurge_tooltip
+			hidden_effect = {
+				add_to_variable = {
+					var = dissenter_threat
+					value = -25
+				}
+				country_event = { id = purge.2 }
+			}
+		}
+	}
+	
+	focus = {
+		id = smb_purge_scientists
+		icon = GFX_goal_smb_purge_scientists
+		available = { 
+			has_country_flag = SMB_iron_grip
+		}
+
+		prerequisite = { 
+			focus = smb_great_purge
+		}
+
+		allow_branch = {
+            hidden_trigger = {
+                has_country_flag = SMB_iron_grip
+            }
+        }
+		
+		continue_if_invalid = yes
+				
+		x = 2
+		y = 1
+		relative_position_id = smb_great_purge
+		cost = 5
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			custom_effect_tooltip = smb_sciencepurge_tooltip
+			hidden_effect = {
+				add_to_variable = {
+					var = science_threat
+					value = -25
+				}
+				country_event = { id = purge.3 }
+			}
+		}
+	}
+	
+	focus = {
+		id = smb_1917_relived
+		icon = GFX_goal_smb_1917_relived
+		available = { 
+			AND = {
+				has_country_flag = SMB_iron_grip
+				has_country_flag = smb_politics_done
+			}
+		}
+
+		prerequisite = { 
+			focus = smb_purge_army
+		}
+		prerequisite = { 
+			focus = smb_purge_dissenters
+		}
+		prerequisite = { 
+			focus = smb_purge_scientists
+ 		}
+
+
+
+
+		allow_branch = {
+            hidden_trigger = {
+                has_country_flag = SMB_iron_grip
+            }
+        }
+		
+		continue_if_invalid = yes
+				
+		x = 0
+		y = 1
+		relative_position_id = smb_purge_dissenters
+		cost = 5
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+		custom_effect_tooltip = smb_1917_tooltip
+			hidden_effect = {
+			set_stability = 0.45
+			set_war_support = 0.4
+			}
+		}
+	}
+	
+	focus = {
+		id = smb_peace
+		icon = GFX_goal_smb_peace
+		available = { 
+			has_country_flag = SMB_iron_grip
+		}
+
+		prerequisite = { 
+			focus = smb_1917_relived
+		}
+
+
+
+
+		allow_branch = {
+            hidden_trigger = {
+                has_country_flag = SMB_iron_grip
+            }
+        }
+		
+		continue_if_invalid = yes
+				
+		x = -3
+		y = 1
+		relative_position_id = smb_1917_relived
+		cost = 5
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			549 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+			
+			add_threat = -10
+			
+			add_stability = 0.1
+		}
+	}
+	
+	focus = {
+		id = smb_no_peace
+		icon = GFX_goal_smb_no_peace
+		available = { 
+			has_country_flag = SMB_iron_grip
+		}
+
+		prerequisite = { 
+			focus = smb_peace
+		}
+
+
+
+
+		allow_branch = {
+            hidden_trigger = {
+                has_country_flag = SMB_iron_grip
+            }
+        }
+		
+		continue_if_invalid = yes
+				
+		x = 0
+		y = 1
+		relative_position_id = smb_peace
+		cost = 5
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			549 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			
+			add_threat = 20
+						
+			add_stability = -0.1
+			add_war_support = 0.1
+		}
+	}
+	
+	focus = {
+		id = smb_new_officers
+		icon = GFX_goal_smb_new_officers
+		available = { 
+			has_country_flag = SMB_iron_grip
+		}
+
+		prerequisite = { 
+			focus = smb_no_peace
+		}
+
+
+
+
+		allow_branch = {
+            hidden_trigger = {
+                has_country_flag = SMB_iron_grip
+            }
+        }
+		
+		continue_if_invalid = yes
+				
+		x = 1
+		y = 1
+		relative_position_id = smb_no_peace
+		cost = 5
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			custom_effect_tooltip = smb_new_officers_tooltip
+			add_to_variable = {
+				var = smb_officers_purged
+				value = 0.10
+			}
+			if = {
+				limit = {
+					check_variable = {
+						var = smb_officers_purged
+						value = 0
+						compare = greater_than
+					}
+				}
+				hidden_effect = {
+					add_dynamic_modifier = { modifier = smb_new_officers_modifier }
+					remove_dynamic_modifier = { modifier = smb_officer_purge }
+					force_update_dynamic_modifier = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = smb_mobilize_colony
+		icon = GFX_goal_smb_mobilize_colony
+		available = { 
+			has_country_flag = SMB_iron_grip
+		}
+
+		prerequisite = { 
+			focus = smb_no_peace
+		}
+
+
+
+
+		allow_branch = {
+            hidden_trigger = {
+                has_country_flag = SMB_iron_grip
+            }
+        }
+		
+		continue_if_invalid = yes
+				
+		x = -1
+		y = 1
+		relative_position_id = smb_no_peace
+		cost = 5
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = { war_economy }
+			add_war_support = 0.05
+			549 = {
+				add_building_construction = {
+					type = arms_factory 
+					level = 2
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+		}
+	}
+	
+	focus = {
+		id = smb_more_men
+		icon = GFX_goal_smb_more_men
+		available = { 
+			has_country_flag = SMB_iron_grip
+		}
+
+		prerequisite = { 
+			focus = smb_mobilize_colony
+		}
+
+
+
+
+		allow_branch = {
+            hidden_trigger = {
+                has_country_flag = SMB_iron_grip
+            }
+        }
+		
+		continue_if_invalid = yes
+				
+		x = 0
+		y = 1
+		relative_position_id = smb_mobilize_colony
+		cost = 5
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = { service_by_requirement }
+			add_manpower = 10000
+		}
+	}
+	
+	focus = {
+		id = smb_state_focus
+		icon = GFX_goal_smb_state_focus
+		available = { 
+			has_country_flag = SMB_iron_grip
+		}
+
+		prerequisite = { 
+			focus = smb_more_men
+		}
+
+
+
+
+		allow_branch = {
+            hidden_trigger = {
+                has_country_flag = SMB_iron_grip
+            }
+        }
+		
+		continue_if_invalid = yes
+				
+		x = 0
+		y = 1
+		relative_position_id = smb_more_men
+		cost = 5
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.10
+		}
+	}
+	
+	focus = {
+		id = smb_is_for_war
+		icon = GFX_goal_smb_is_for_war
+		available = { 
+			has_country_flag = SMB_iron_grip
+		}
+
+		prerequisite = { 
+			focus = smb_state_focus
+		}
+
+
+
+
+		allow_branch = {
+            hidden_trigger = {
+                has_country_flag = SMB_iron_grip
+            }
+        }
+		
+		continue_if_invalid = yes
+				
+		x = 0
+		y = 1
+		relative_position_id = smb_state_focus
+		cost = 5
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 100
+			add_manpower = 10000
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1000
+			}
+			add_resource = {
+				type = tungsten
+				amount = 5
+				state = 549
+			}
+			add_resource = {
+				type = chromium
+				amount = 5
+				state = 549
+			}
+			add_threat = 5
+		}
+	}
+	
+	focus = {
+		id = smb_mars_ours
+		icon = GFX_goal_smb_mars_ours
+		available = { 
+			has_country_flag = SMB_iron_grip
+		}
+
+		prerequisite = { 
+			focus = smb_is_for_war
+		}
+
+		allow_branch = {
+            hidden_trigger = {
+                has_country_flag = SMB_iron_grip
+            }
+        }
+		
+		continue_if_invalid = yes
+				
+		x = 1
+		y = 1
+		relative_position_id = smb_is_for_war
+		cost = 5
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			every_state = {
+				add_claim_by = SMB
+			}
+		}
+	}
+	
+	focus = {
+		id = smb_land
+		icon = GFX_goal_smb_land
+		available = { 
+			has_country_flag = SMB_iron_grip
+		}
+
+		prerequisite = { 
+			focus = smb_1917_relived
+		}
+
+
+
+
+		allow_branch = {
+            hidden_trigger = {
+                has_country_flag = SMB_iron_grip
+            }
+        }
+		
+		continue_if_invalid = yes
+				
+		x = 3
+		y = 1
+		relative_position_id = smb_1917_relived
+		cost = 5
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			549 = {
+				add_extra_state_shared_building_slots = 3
+			}
+		}
+	}
+	
+	focus = {
+		id = smb_roads_railways
+		icon = GFX_goal_smb_roads_railways
+		available = { 
+			has_country_flag = SMB_iron_grip
+		}
+
+		prerequisite = { 
+			focus = smb_land
+		}
+
+
+
+
+		allow_branch = {
+            hidden_trigger = {
+                has_country_flag = SMB_iron_grip
+            }
+        }
+		
+		continue_if_invalid = yes
+				
+		x = 0
+		y = 1
+		relative_position_id = smb_land
+		cost = 5
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = { smb_roads_railways }
+		}
+	}
+	
+	focus = {
+		id = smb_scientists_industry
+		icon = GFX_goal_smb_scientists_industry
+		available = { 
+			has_country_flag = SMB_iron_grip
+		}
+
+		prerequisite = { 
+			focus = smb_roads_railways
+		}
+
+
+
+
+		allow_branch = {
+            hidden_trigger = {
+                has_country_flag = SMB_iron_grip
+            }
+        }
+		
+		continue_if_invalid = yes
+				
+		x = -1
+		y = 1
+		relative_position_id = smb_roads_railways
+		cost = 5
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			custom_effect_tooltip = smb_new_scientists_tooltip
+			add_to_variable = {
+				var = smb_scientists_purged
+				value = 0.10
+			}
+			if = {
+				limit = {
+					check_variable = {
+						var = smb_scientists_purged
+						value = 0
+						compare = greater_than
+					}
+				}
+				hidden_effect = {
+					add_dynamic_modifier = { modifier = smb_new_scientists_modifier }
+					remove_dynamic_modifier = { modifier = smb_science_purge }
+					force_update_dynamic_modifier = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = smb_automated_farms
+		icon = GFX_goal_smb_automated_farms
+		available = { 
+			has_country_flag = SMB_iron_grip
+		}
+
+		prerequisite = { 
+			focus = smb_roads_railways
+		}
+
+
+
+
+		allow_branch = {
+            hidden_trigger = {
+                has_country_flag = SMB_iron_grip
+            }
+        }
+		
+		continue_if_invalid = yes
+				
+		x = 1
+		y = 1
+		relative_position_id = smb_roads_railways
+		cost = 5
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = { smb_automated_farms }
+		}
+	}
+	
+	focus = {
+		id = smb_connect_colonies
+		icon = GFX_goal_smb_connect_colonies
+		available = { 
+			has_country_flag = SMB_iron_grip
+		}
+
+		prerequisite = { 
+			focus = smb_automated_farms
+		}
+
+
+
+
+		allow_branch = {
+            hidden_trigger = {
+                has_country_flag = SMB_iron_grip
+            }
+        }
+		
+		continue_if_invalid = yes
+				
+		x = 0
+		y = 1
+		relative_position_id = smb_automated_farms
+		cost = 5
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			549 = {
+				set_building_level = {
+					type = infrastructure
+					level = 10
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = smb_trans_martian_railway
+		icon = GFX_goal_smb_trans_martian_railway
+		available = { 
+			has_country_flag = SMB_iron_grip
+			num_of_controlled_states > 1
+		}
+
+		prerequisite = { 
+			focus = smb_connect_colonies
+		}
+
+
+
+
+		allow_branch = {
+            hidden_trigger = {
+                has_country_flag = SMB_iron_grip
+            }
+        }
+		
+		continue_if_invalid = yes
+				
+		x = 0
+		y = 1
+		relative_position_id = smb_connect_colonies
+		cost = 5
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			every_controlled_state = {
+				add_building_construction = {
+					type = infrastructure 
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = smb_let_them_work
+		icon = GFX_goal_smb_let_them_work
+		available = { 
+			has_country_flag = SMB_iron_grip
+		}
+
+		prerequisite = { 
+			focus = smb_trans_martian_railway
+		}
+
+
+
+
+		allow_branch = {
+            hidden_trigger = {
+                has_country_flag = SMB_iron_grip
+            }
+        }
+		
+		continue_if_invalid = yes
+				
+		x = 0
+		y = 1
+		relative_position_id = smb_trans_martian_railway
+		cost = 5
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = { smb_let_them_work }
+		}
+	}
+	
+	focus = {
+		id = smb_even_to_death
+		icon = GFX_goal_smb_even_to_death
+		available = { 
+			has_country_flag = SMB_iron_grip
+		}
+
+		prerequisite = { 
+			focus = smb_let_them_work
+		}
+
+
+
+
+		allow_branch = {
+            hidden_trigger = {
+                has_country_flag = SMB_iron_grip
+            }
+        }
+		
+		continue_if_invalid = yes
+				
+		x = -1
+		y = 1
+		relative_position_id = smb_let_them_work
+		cost = 5
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = { smb_even_to_death }
+			hidden_effect = {
+				remove_ideas = { smb_let_them_work }
+			}
+		}
+	}
+	
+	focus = {
+		id = smb_decree_workers
+		icon = GFX_goal_smb_decree_workers
+		available = { 
+			has_country_flag = SMB_iron_grip
+		}
+
+		prerequisite = { 
+			focus = smb_1917_relived
+		}
+		prerequisite = { 
+			focus = smb_peace
+		}
+		prerequisite = { 
+			focus = smb_land
+		}
+
+
+
+
+		allow_branch = {
+            hidden_trigger = {
+                has_country_flag = SMB_iron_grip
+            }
+        }
+		
+		continue_if_invalid = yes
+				
+		x = 0
+		y = 2
+		relative_position_id = smb_1917_relived
+		cost = 5
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = { smb_decree_workers }
+		}
+	}
+	
+	focus = {
+		id = smb_restless
+		icon = GFX_goal_smb_restless
+		available = { 
+			has_country_flag = SMB_iron_grip
+		}
+
+		prerequisite = { 
+			focus = smb_decree_workers
+		}
+
+
+
+
+		allow_branch = {
+            hidden_trigger = {
+                has_country_flag = SMB_iron_grip
+            }
+        }
+		
+		continue_if_invalid = yes
+				
+		x = 0
+		y = 2
+		relative_position_id = smb_decree_workers
+		cost = 5
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = { smb_restless }
+		}
+	}
+	
+	focus = {
+		id = smb_zombies_to_work
+		icon = GFX_goal_smb_exo_research
+		available = { 
+			has_country_flag = SMB_iron_grip
+			has_completed_focus = smb_exo_test
+		}
+
+		prerequisite = { 
+			focus = smb_restless
+		}
+
+		mutually_exclusive = {
+			focus = smb_serfs
+		}
+
+		allow_branch = {
+            hidden_trigger = {
+                has_country_flag = SMB_iron_grip
+            }
+        }
+		
+		continue_if_invalid = yes
+				
+		x = -1
+		y = 1
+		relative_position_id = smb_restless
+		cost = 5
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = { smb_zombies_to_work }
+		}
+	}
+	
+	focus = {
+		id = smb_serfs
+		icon = GFX_goal_smb_serfs
+		available = { 
+			has_country_flag = SMB_iron_grip
+		}
+
+		prerequisite = { 
+			focus = smb_restless
+		}
+
+		mutually_exclusive = {
+			focus = smb_zombies_to_work
+		}
+
+		allow_branch = {
+            hidden_trigger = {
+                has_country_flag = SMB_iron_grip
+            }
+        }
+		
+		continue_if_invalid = yes
+				
+		x = 1
+		y = 1
+		relative_position_id = smb_restless
+		cost = 5
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = { smb_serfs }
+			add_stability = -0.20
+		}
+	}
+	
+	focus = {
+		id = smb_drug_workforce
+		icon = GFX_goal_smb_drug_workforce
+		available = { 
+			has_country_flag = SMB_iron_grip
+		}
+
+		prerequisite = { 
+			focus = smb_serfs
+			focus = smb_zombies_to_work
+		}
+		
+		allow_branch = {
+            hidden_trigger = {
+                has_country_flag = SMB_iron_grip
+            }
+        }
+		
+		continue_if_invalid = yes
+				
+		x = 0
+		y = 2
+		relative_position_id = smb_restless
+		cost = 5
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = { smb_drug_workforce }
+		}
+	}
+	
+	focus = {
+		id = smb_punish_rest
+		icon = GFX_goal_smb_punish_rest
+		available = { 
+			has_country_flag = SMB_iron_grip
+		}
+
+		prerequisite = { 
+			focus = smb_drug_workforce
+		}
+
+		allow_branch = {
+            hidden_trigger = {
+                has_country_flag = SMB_iron_grip
+            }
+        }
+		
+		continue_if_invalid = yes
+				
+		x = 0
+		y = 1
+		relative_position_id = smb_drug_workforce
+		cost = 5
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_stability = -0.10
+		}
+	}
+	
+	focus = {
+		id = smb_october_eternal
+		icon = GFX_goal_smb_october_eternal
+		available = { 
+			has_country_flag = SMB_iron_grip
+		}
+
+		prerequisite = { 
+			focus = smb_mars_ours
+		}
+		prerequisite = { 
+			focus = smb_punish_rest
+		}
+		prerequisite = { 
+			focus = smb_even_to_death
+		}
+		
+		allow_branch = {
+            hidden_trigger = {
+                has_country_flag = SMB_iron_grip
+            }
+        }
+		
+		continue_if_invalid = yes
+				
+		x = -1
+		y = 1
+		relative_position_id = smb_punish_rest
+		cost = 5
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	
+	focus = {
+		id = smb_lenin_proud
+		icon = GFX_goal_smb_lenin_proud
+		available = { 
+			has_country_flag = SMB_iron_grip
+		}
+
+		prerequisite = { 
+			focus = smb_mars_ours
+		}
+		prerequisite = { 
+			focus = smb_punish_rest
+		}
+		prerequisite = { 
+			focus = smb_even_to_death
+		}
+
+		allow_branch = {
+            hidden_trigger = {
+                has_country_flag = SMB_iron_grip
+            }
+        }
+		
+		continue_if_invalid = yes
+				
+		x = 1
+		y = 1
+		relative_position_id = smb_punish_rest
+		cost = 5
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			hidden_effect = {
+				kill_ideology_leader = communism
+			}
+			create_country_leader = { 
+				name = "Lenin II"
+				desc = "Lenin is young again!"
+				picture = "GFX_lenin2"
+				ideology = leninism
+				traits = {
+					man_of_the_nation
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = smb_declare_union
+		icon = GFX_goal_smb_declare_union
+		available = { 
+			has_country_flag = SMB_iron_grip
+		}
+
+		prerequisite = { 
+			focus = smb_lenin_proud
+		}
+		prerequisite = {
+			focus = smb_october_eternal
+		}
+
+		allow_branch = {
+            hidden_trigger = {
+                has_country_flag = SMB_iron_grip
+            }
+        }
+		
+		continue_if_invalid = yes
+				
+		x = 0
+		y = 3
+		relative_position_id = smb_punish_rest
+		cost = 5
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			 set_cosmetic_tag = SMU
+		}
+	}
+	
+	###### HUMAN ##########
+	
+	focus = {
+		id = smb_human_body
+		icon = GFX_goal_smb_human_body
+		available = { 
+			has_country_flag = SMB_using_human
+		}
+		
+		allow_branch = {
+            hidden_trigger = {
+                has_country_flag = SMB_using_human
+            }
+        }
+		
+		continue_if_invalid = yes
+				
+		x = 6
+		y = 0
+		relative_position_id = smb_open_doors
+		cost = 5
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			custom_effect_tooltip = smb_human_body_tooltip
+			hidden_effect = {
+				country_event = { id = human.1 }
+			}
+		}
+	}
+	
+	focus = {
+		id = smb_vostok_camp
+		icon = GFX_goal_smb_vostok_camp
+		available = { 
+			has_country_flag = SMB_using_human
+		}
+		
+		allow_branch = {
+            hidden_trigger = {
+                has_country_flag = SMB_using_human
+            }
+        }
+		
+		prerequisite = {
+			focus = smb_human_body
+		}
+		
+		continue_if_invalid = yes
+				
+		x = 0
+		y = 1
+		relative_position_id = smb_human_body
+		cost = 5
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			549 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 5
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = smb_human_speed
+		icon = GFX_goal_smb_human_speed
+		available = { 
+			has_country_flag = SMB_using_human
+		}
+		
+		allow_branch = {
+            hidden_trigger = {
+                has_country_flag = SMB_using_human
+            }
+        }
+		
+		prerequisite = {
+			focus = smb_vostok_camp
+		}
+		
+		mutually_exclusive = {
+			focus = smb_human_strength
+			focus = smb_human_destruction
+		}
+		
+		continue_if_invalid = yes
+				
+		x = -2
+		y = 1
+		relative_position_id = smb_vostok_camp
+		cost = 5
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = cat_mobile_warfare
+			}
+		}
+	}
+	
+	focus = {
+		id = smb_human_strength
+		icon = GFX_goal_smb_human_strength
+		available = { 
+			has_country_flag = SMB_using_human
+		}
+		
+		allow_branch = {
+            hidden_trigger = {
+                has_country_flag = SMB_using_human
+            }
+        }
+		
+		prerequisite = {
+			focus = smb_vostok_camp
+		}
+		
+		mutually_exclusive = {
+			focus = smb_human_speed
+			focus = smb_human_destruction
+		}
+		
+		continue_if_invalid = yes
+				
+		x = 0
+		y = 1
+		relative_position_id = smb_vostok_camp
+		cost = 5
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = cat_grand_battle_plan
+			}
+		}
+	}
+	
+	focus = {
+		id = smb_human_destruction
+		icon = GFX_goal_smb_human_destruction
+		available = { 
+			has_country_flag = SMB_using_human
+		}
+		
+		allow_branch = {
+            hidden_trigger = {
+                has_country_flag = SMB_using_human
+            }
+        }
+		
+		prerequisite = {
+			focus = smb_vostok_camp
+		}
+		
+		mutually_exclusive = {
+			focus = smb_human_strength
+			focus = smb_human_speed
+		}
+		
+		continue_if_invalid = yes
+				
+		x = 2
+		y = 1
+		relative_position_id = smb_vostok_camp
+		cost = 5
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = cat_superior_firepower
+			}
+		}
+	}
+	
+	focus = {
+		id = smb_human_pound_enemy
+		icon = GFX_goal_smb_human_pound_enemy
+		available = { 
+			has_country_flag = SMB_using_human
+		}
+		
+		allow_branch = {
+            hidden_trigger = {
+                has_country_flag = SMB_using_human
+            }
+        }
+		
+		prerequisite = {
+			focus = smb_human_destruction
+		}
+
+		continue_if_invalid = yes
+				
+		x = 1
+		y = 1
+		relative_position_id = smb_human_destruction
+		cost = 5
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = { smb_pound_enemy }
+		}
+	}
+	
+	
+	
+	
+	
+	focus = {
+		id = smb_human_adapt_vehicles
+		icon = GFX_goal_smb_human_adapt_vehicles
+		available = { 
+			has_country_flag = SMB_using_human
+		}
+		
+		allow_branch = {
+            hidden_trigger = {
+                has_country_flag = SMB_using_human
+            }
+        }
+		
+		prerequisite = {
+			focus = smb_human_speed
+		}
+
+		continue_if_invalid = yes
+				
+		x = -1
+		y = 1
+		relative_position_id = smb_human_speed
+		cost = 5
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = armor
+			}
+		}
+	}
+	
+	focus = {
+		id = smb_human_research_tanks
+		icon = GFX_goal_smb_human_research_tanks
+		available = { 
+			has_country_flag = SMB_using_human
+		}
+		
+		allow_branch = {
+            hidden_trigger = {
+                has_country_flag = SMB_using_human
+            }
+        }
+		
+		prerequisite = {
+			focus = smb_human_adapt_vehicles
+		}
+
+		continue_if_invalid = yes
+				
+		x = 0
+		y = 1
+		relative_position_id = smb_human_adapt_vehicles
+		cost = 5
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = armor
+			}
+		}
+	}
+	
+	focus = {
+		id = smb_human_adapt_guns
+		icon = GFX_goal_smb_human_adapt_guns
+		available = { 
+			has_country_flag = SMB_using_human
+		}
+		
+		allow_branch = {
+            hidden_trigger = {
+                has_country_flag = SMB_using_human
+            }
+        }
+		
+		prerequisite = {
+			focus = smb_human_speed
+			focus = smb_human_strength
+			focus = smb_human_destruction
+		}
+
+		continue_if_invalid = yes
+				
+		x = -1
+		y = 1
+		relative_position_id = smb_human_strength
+		cost = 5
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = infantry_weapons
+			}
+		}
+	}
+	
+	focus = {
+		id = smb_human_adapt_suits
+		icon = GFX_goal_smb_human_adapt_suits
+		available = { 
+			has_country_flag = SMB_using_human
+		}
+		
+		allow_branch = {
+            hidden_trigger = {
+                has_country_flag = SMB_using_human
+            }
+        }
+		
+		prerequisite = {
+			focus = smb_human_speed
+			focus = smb_human_strength
+			focus = smb_human_destruction
+		}
+
+		continue_if_invalid = yes
+				
+		x = 1
+		y = 1
+		relative_position_id = smb_human_strength
+		cost = 5
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = { smb_adapt_suits }
+		}
+	}
+	
+	focus = {
+		id = smb_human_finish_training
+		icon = GFX_goal_smb_human_finish_training
+		available = { 
+			has_country_flag = SMB_using_human
+		}
+		
+		allow_branch = {
+            hidden_trigger = {
+                has_country_flag = SMB_using_human
+            }
+        }
+		
+		prerequisite = {
+			focus = smb_human_adapt_guns
+		}
+		prerequisite = {
+			focus = smb_human_adapt_suits
+		}
+
+		continue_if_invalid = yes
+				
+		x = 0
+		y = 2
+		relative_position_id = smb_human_strength
+		cost = 5
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = { smb_finish_training }
+		}
+	}
+	
+	focus = {
+		id = smb_human_finish_strategies
+		icon = GFX_goal_smb_human_finish_strategies
+		available = { 
+			has_country_flag = SMB_using_human
+		}
+		
+		allow_branch = {
+            hidden_trigger = {
+                has_country_flag = SMB_using_human
+            }
+        }
+		
+		prerequisite = {
+			focus = smb_human_adapt_guns
+		}
+		prerequisite = {
+			focus = smb_human_adapt_suits
+		}
+
+		continue_if_invalid = yes
+				
+		x = 0
+		y = 1
+		relative_position_id = smb_human_finish_training
+		cost = 5
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+		}
+	}
+	focus = {
+		id = smb_human_soldier_clean
+		icon = GFX_goal_smb_human_soldier_clean
+		available = { 
+			has_country_flag = SMB_using_human
+		}
+		
+		allow_branch = {
+            hidden_trigger = {
+                has_country_flag = SMB_using_human
+            }
+        }
+		
+		mutually_exclusive = {
+			focus = smb_human_soldier_drugs
+		}
+		
+		prerequisite = {
+			focus = smb_human_finish_strategies
+		}
+
+		continue_if_invalid = yes
+				
+		x = -1
+		y = 1
+		relative_position_id = smb_human_finish_strategies
+		cost = 5
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = { smb_soldier_clean }
+		}
+	}
+	
+	focus = {
+		id = smb_human_soldier_drugs
+		icon = GFX_goal_smb_human_soldier_drugs
+		available = { 
+			has_country_flag = SMB_using_human
+		}
+		
+		allow_branch = {
+            hidden_trigger = {
+                has_country_flag = SMB_using_human
+            }
+        }
+		
+		mutually_exclusive = {
+			focus = smb_human_factory_drugs
+		}
+		
+		prerequisite = {
+			focus = smb_human_finish_strategies
+		}
+
+		continue_if_invalid = yes
+				
+		x = 1
+		y = 1
+		relative_position_id = smb_human_finish_strategies
+		cost = 5
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = { smb_soldier_drugs }
+		}
+	}
+	
+	
+	
+	focus = {
+		id = smb_use_dead
+		icon = GFX_goal_smb_use_dead
+		available = { 
+			has_country_flag = SMB_intro
+		}
+		
+		prerequisite = {
+			focus = smb_scavenge_supplies
+		}
+		
+		prerequisite = {
+			focus = smb_find_survivors
+		}
+		
+		mutually_exclusive = {
+			focus = smb_respect_dead
+		}
+		
+		allow_branch = {
+            hidden_trigger = {
+                has_country_flag = SMB_intro
+            }
+        }
+		
+		continue_if_invalid = yes
+				
+		x = 0
+		y = 1
+		relative_position_id = smb_find_survivors
+		cost = 5
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			custom_effect_tooltip = smb_use_dead_tooltip
+			army_experience = 30
+			hidden_effect = {
+				add_ideas = { smb_usedead }
+				set_country_flag = SMB_using_dead
+				mark_focus_tree_layout_dirty = yes
+			}
+		}
+	}
+	
+	
+	
+	####### Exo focuses
+	
+	
+	
+	
+	
+	focus = {
+		id = smb_exo_research
+		icon = GFX_goal_smb_exo_research
+		available = { 
+			has_country_flag = SMB_using_dead
+		}
+		
+		allow_branch = {
+            hidden_trigger = {
+                has_country_flag = SMB_using_dead
+            }
+        }
+		
+		continue_if_invalid = yes
+				
+		x = 5
+		y = 0
+		relative_position_id = smb_open_doors
+		cost = 5
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			custom_effect_tooltip = smb_exo_research_tooltip
+			hidden_effect = {
+				country_event = { id = exo.1 }
+			}
+		}
+	}
+	
+	focus = {
+		id = smb_exo_quality
+		icon = GFX_goal_smb_exo_quality
+		available = { 
+			has_country_flag = SMB_using_dead
+			always = NO
+		}
+		
+		mutually_exclusive = {
+			focus = smb_exo_quantity
+		}
+		
+		allow_branch = {
+            hidden_trigger = {
+                has_country_flag = SMB_using_dead
+            }
+        }
+		
+		prerequisite = {
+			focus = smb_exo_research
+		}
+		
+		continue_if_invalid = yes
+				
+		x = -1
+		y = 1
+		relative_position_id = smb_exo_research
+		cost = 5
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = { smb_exo_quality1 }
+		}
+	}
+	
+	focus = {
+		id = smb_exo_quantity
+		icon = GFX_goal_smb_exo_quantity
+		available = { 
+			has_country_flag = SMB_using_dead
+			always = NO
+		}
+		
+		mutually_exclusive = {
+			focus = smb_exo_quality
+		}
+		
+		prerequisite = {
+			focus = smb_exo_research
+		}
+		
+		allow_branch = {
+            hidden_trigger = {
+                has_country_flag = SMB_using_dead
+            }
+        }
+		
+		continue_if_invalid = yes
+				
+		x = 1
+		y = 1
+		relative_position_id = smb_exo_research
+		cost = 5
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = { smb_exo_quantity }
+
+		}
+	}
+	
+	focus = {
+		id = smb_exo_industry
+		icon = GFX_goal_smb_industry_online
+		available = { 
+			has_country_flag = SMB_using_dead
+		}
+
+		
+		prerequisite = {
+			focus = smb_exo_quality
+			focus = smb_exo_quantity
+		}
+		
+		allow_branch = {
+            hidden_trigger = {
+                has_country_flag = SMB_using_dead
+            }
+        }
+		
+		continue_if_invalid = yes
+				
+		x = 0
+		y = 2
+		relative_position_id = smb_exo_research
+		cost = 5
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			random_state = {
+				limit = {
+					owner = { tag = SMB }
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 4
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 4
+			}
+			hidden_effect = {
+				transfer_state = 500
+				WST = {
+					transfer_state = 500
+				}
+			}
+		}
+	}
+		
+	focus = {
+		id = smb_exo_best_material
+		icon = GFX_goal_smb_exo_best_material
+		available = { 
+			has_country_flag = SMB_using_dead
+		}
+		prerequisite = {
+			focus = smb_exo_quality
+		}
+		
+		allow_branch = {
+            hidden_trigger = {
+                has_country_flag = SMB_using_dead
+            }
+        }
+		
+		continue_if_invalid = yes
+				
+		x = -1
+		y = 1
+		relative_position_id = smb_exo_quality
+		cost = 5
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = { smb_exo_quality2 }
+			remove_ideas = { smb_exo_quality1 }
+		}
+	}
+	
+	focus = {
+		id = smb_exo_cheaper_source
+		icon = GFX_goal_smb_exo_cheaper_source
+		available = { 
+			has_country_flag = SMB_using_dead
+		}
+
+		prerequisite = {
+			focus = smb_exo_quantity
+		}
+		
+		allow_branch = {
+            hidden_trigger = {
+                has_country_flag = SMB_using_dead
+            }
+        }
+		
+		continue_if_invalid = yes
+				
+		x = 1
+		y = 1
+		relative_position_id = smb_exo_quantity
+		cost = 5
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_resource = {
+				type = steel
+				amount = 10
+				state = 549
+			}
+		}
+	}
+		
+	focus = {
+		id = smb_exo_human_battery
+		icon = GFX_goal_smb_exo_human_battery
+		available = { 
+			has_country_flag = SMB_using_dead
+		}
+		
+		prerequisite = {
+			focus = smb_exo_industry
+		}
+		prerequisite = {
+			focus = smb_exo_best_material
+			focus = smb_exo_cheaper_source
+		}
+		
+		allow_branch = {
+            hidden_trigger = {
+                has_country_flag = SMB_using_dead
+            }
+        }
+		
+		continue_if_invalid = yes
+				
+		x = 0
+		y = 1
+		relative_position_id = smb_exo_industry
+		cost = 5
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			custom_effect_tooltip = smb_exo_very_scary_tooltip
+		}
+	}
+	
+	focus = {
+		id = smb_exo_calculated
+		icon = GFX_goal_smb_exo_calculated
+		available = { 
+			has_country_flag = SMB_using_dead
+		}
+		
+		prerequisite = {
+			focus = smb_exo_best_material
+		}
+		
+		allow_branch = {
+            hidden_trigger = {
+                has_country_flag = SMB_using_dead
+            }
+        }
+		
+		continue_if_invalid = yes
+				
+		x = 0
+		y = 1
+		relative_position_id = smb_exo_best_material
+		cost = 5
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = cat_grand_battle_plan
+			}
+		}
+	}
+	
+	focus = {
+		id = smb_exo_overwhelm
+		icon = GFX_goal_smb_exo_overwhelm
+		available = { 
+			has_country_flag = SMB_using_dead
+		}
+		
+		prerequisite = {
+			focus = smb_exo_cheaper_source
+		}
+		
+		allow_branch = {
+            hidden_trigger = {
+                has_country_flag = SMB_using_dead
+            }
+        }
+		
+		continue_if_invalid = yes
+				
+		x = 0
+		y = 1
+		relative_position_id = smb_exo_cheaper_source
+		cost = 5
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = cat_mass_assault
+			}
+		}
+	}
+	
+	focus = {
+		id = smb_exo_faster
+		icon = GFX_goal_smb_exo_faster
+		available = { 
+			has_country_flag = SMB_using_dead
+		}
+		
+		mutually_exclusive = {
+			focus = smb_exo_stronger
+		}
+		
+		prerequisite = {
+			focus = smb_exo_human_battery
+		}
+		
+		allow_branch = {
+            hidden_trigger = {
+                has_country_flag = SMB_using_dead
+            }
+        }
+		
+		continue_if_invalid = yes
+				
+		x = 1
+		y = 1
+		relative_position_id = smb_exo_human_battery
+		cost = 5
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = { smb_exo_faster }
+		}
+	}
+	
+	focus = {
+		id = smb_exo_stronger
+		icon = GFX_goal_smb_exo_stronger
+		available = { 
+			has_country_flag = SMB_using_dead
+		}
+		
+		mutually_exclusive = {
+			focus = smb_exo_faster
+		}
+		
+		prerequisite = {
+			focus = smb_exo_human_battery
+		}
+		
+		allow_branch = {
+            hidden_trigger = {
+                has_country_flag = SMB_using_dead
+            }
+        }
+		
+		continue_if_invalid = yes
+				
+		x = -1
+		y = 1
+		relative_position_id = smb_exo_human_battery
+		cost = 5
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = { smb_exo_stronger }
+		}
+	}
+	
+	focus = {
+		id = smb_exo_test
+		icon = GFX_goal_smb_exo_test
+		available = { 
+			has_country_flag = SMB_using_dead
+		}
+		
+		prerequisite = {
+			focus = smb_exo_stronger
+			focus = smb_exo_faster
+		}
+		prerequisite = {
+			focus = smb_exo_calculated
+			focus = smb_exo_overwhelm
+		}
+		
+		allow_branch = {
+            hidden_trigger = {
+                has_country_flag = SMB_using_dead
+            }
+        }
+		
+		continue_if_invalid = yes
+				
+		x = 0
+		y = 2
+		relative_position_id = smb_exo_human_battery
+		cost = 5
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			set_technology = {
+				exoskeletons = 1
+			}
+		}
+	}
+}

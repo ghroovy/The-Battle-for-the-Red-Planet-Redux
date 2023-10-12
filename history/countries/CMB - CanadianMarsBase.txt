@@ -1,0 +1,71 @@
+﻿capital = 48
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	tech_support = 1
+	tech_recon = 1
+	support_weapons = 1
+	gw_artillery = 1
+}
+
+set_convoys = 0
+
+1939.1.1 = {
+	set_technology = {
+		infantry_weapons = 1
+		tech_support = 1
+		tech_recon = 1
+		support_weapons = 1
+		gw_artillery = 1
+	}
+}
+
+
+set_politics = {
+	ruling_party = socialism_i
+	last_election = "2019.11.1"
+	election_frequency = 48
+	elections_allowed = yes
+}
+
+set_popularities = {
+	socialism_i = 85
+	national_socialism = 5
+	conservatism_i = 1
+	liberalism_i = 2
+	ultranationalism = 2
+	communism = 5
+}
+
+create_country_leader = {	
+	name = "Aaron Daniel"
+	picture = "gfx/leaders/CMB/Aaron.dds"
+	expire = "2020.5.1"
+	ideology = socialism
+
+}
+
+2020.1.1 = {
+	set_politics = {
+		ruling_party = socialism_i
+		last_election = "2020.1.1"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+	set_popularities = {
+		socialism_i = 85
+		national_socialism = 5
+		conservatism_i = 1
+		liberalism_i = 2
+		ultranationalism = 2
+		communism = 5
+	}
+}
+
+add_ideas = { 
+	martian_recruiting
+}
+
+add_opinion_modifier = { target = GMB modifier = hostile_status }
+add_opinion_modifier = { target = SMB modifier = hostile_status }		

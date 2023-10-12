@@ -1,0 +1,829 @@
+﻿add_namespace = purge
+
+country_event = {
+	id = purge.1
+	
+	hidden = yes
+	
+	trigger = {
+		tag = SMB
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				AND = {
+					check_variable = {
+						var = army_threat
+						value = 89
+						compare = greater_than
+					}
+					check_variable = {
+						var = army_threat
+						value = 100
+						compare = less_than
+					}
+					
+				}	
+			}
+			set_variable = {
+				var = current_army_icon_frame
+				value = 10
+			}
+		}
+		
+		if = {
+			limit = {
+				AND = {
+					check_variable = {
+						var = army_threat
+						value = 79
+						compare = greater_than
+					}
+					check_variable = {
+						var = army_threat
+						value = 91
+						compare = less_than
+					}
+					
+				}	
+			}
+			set_variable = {
+				var = current_army_icon_frame
+				value = 9
+			}
+		}
+		
+		if = {
+			limit = {
+				AND = {
+					check_variable = {
+						var = army_threat
+						value = 79
+						compare = greater_than
+					}
+					check_variable = {
+						var = army_threat
+						value = 91
+						compare = less_than
+					}
+					
+				}	
+			}
+			set_variable = {
+				var = current_army_icon_frame
+				value = 9
+			}
+		}
+		
+		if = {
+			limit = {
+				AND = {
+					check_variable = {
+						var = army_threat
+						value = 69
+						compare = greater_than
+					}
+					check_variable = {
+						var = army_threat
+						value = 81
+						compare = less_than
+					}
+					
+				}	
+			}
+			set_variable = {
+				var = current_army_icon_frame
+				value = 8
+			}
+		}
+		
+		if = {
+			limit = {
+				AND = {
+					check_variable = {
+						var = army_threat
+						value = 59
+						compare = greater_than
+					}
+					check_variable = {
+						var = army_threat
+						value = 71
+						compare = less_than
+					}
+					
+				}	
+			}
+			set_variable = {
+				var = current_army_icon_frame
+				value = 7
+			}
+		}
+		
+		if = {
+			limit = {
+				AND = {
+					check_variable = {
+						var = army_threat
+						value = 49
+						compare = greater_than
+					}
+					check_variable = {
+						var = army_threat
+						value = 61
+						compare = less_than
+					}
+					
+				}	
+			}
+			set_variable = {
+				var = current_army_icon_frame
+				value = 6
+			}
+		}
+		
+		if = {
+			limit = {
+				AND = {
+					check_variable = {
+						var = army_threat
+						value = 39
+						compare = greater_than
+					}
+					check_variable = {
+						var = army_threat
+						value = 51
+						compare = less_than
+					}
+					
+				}	
+			}
+			set_variable = {
+				var = current_army_icon_frame
+				value = 5
+			}
+		}
+		
+		if = {
+			limit = {
+				AND = {
+					check_variable = {
+						var = army_threat
+						value = 29
+						compare = greater_than
+					}
+					check_variable = {
+						var = army_threat
+						value = 41
+						compare = less_than
+					}
+					
+				}	
+			}
+			set_variable = {
+				var = current_army_icon_frame
+				value = 4
+			}
+		}
+		
+		if = {
+			limit = {
+				AND = {
+					check_variable = {
+						var = army_threat
+						value = 19
+						compare = greater_than
+					}
+					check_variable = {
+						var = army_threat
+						value = 31
+						compare = less_than
+					}
+					
+				}	
+			}
+			set_variable = {
+				var = current_army_icon_frame
+				value = 3
+			}
+		}
+		
+		if = {
+			limit = {
+				AND = {
+					check_variable = {
+						var = army_threat
+						value = 9
+						compare = greater_than
+					}
+					check_variable = {
+						var = army_threat
+						value = 21
+						compare = less_than
+					}
+					
+				}	
+			}
+			set_variable = {
+				var = current_army_icon_frame
+				value = 2
+			}
+		}
+		
+		if = {
+			limit = {
+				AND = {
+					check_variable = {
+						var = army_threat
+						value = -1
+						compare = greater_than
+					}
+					check_variable = {
+						var = army_threat
+						value = 1
+						compare = less_than
+					}
+					
+				}	
+			}
+			set_variable = {
+				var = current_army_icon_frame
+				value = 1
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					var = army_threat
+					value = 0
+					compare = less_than
+				}
+			}
+			set_variable = {
+				var = army_threat
+				value = 0
+			}
+		}
+	}
+}
+
+country_event = {
+	id = purge.2
+	
+	hidden = yes
+	
+	trigger = {
+		tag = SMB
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				AND = {
+					check_variable = {
+						var = dissenter_threat
+						value = 89
+						compare = greater_than
+					}
+					check_variable = {
+						var = dissenter_threat
+						value = 100
+						compare = less_than
+					}
+					
+				}	
+			}
+			set_variable = {
+				var = current_dissenter_icon_frame
+				value = 10
+			}
+		}
+		
+		if = {
+			limit = {
+				AND = {
+					check_variable = {
+						var = dissenter_threat
+						value = 79
+						compare = greater_than
+					}
+					check_variable = {
+						var = dissenter_threat
+						value = 91
+						compare = less_than
+					}
+					
+				}	
+			}
+			set_variable = {
+				var = current_dissenter_icon_frame
+				value = 9
+			}
+		}
+		
+		if = {
+			limit = {
+				AND = {
+					check_variable = {
+						var = dissenter_threat
+						value = 79
+						compare = greater_than
+					}
+					check_variable = {
+						var = dissenter_threat
+						value = 91
+						compare = less_than
+					}
+					
+				}	
+			}
+			set_variable = {
+				var = current_dissenter_icon_frame
+				value = 9
+			}
+		}
+		
+		if = {
+			limit = {
+				AND = {
+					check_variable = {
+						var = dissenter_threat
+						value = 69
+						compare = greater_than
+					}
+					check_variable = {
+						var = dissenter_threat
+						value = 81
+						compare = less_than
+					}
+					
+				}	
+			}
+			set_variable = {
+				var = current_dissenter_icon_frame
+				value = 8
+			}
+		}
+		
+		if = {
+			limit = {
+				AND = {
+					check_variable = {
+						var = dissenter_threat
+						value = 59
+						compare = greater_than
+					}
+					check_variable = {
+						var = dissenter_threat
+						value = 71
+						compare = less_than
+					}
+					
+				}	
+			}
+			set_variable = {
+				var = current_dissenter_icon_frame
+				value = 7
+			}
+		}
+		
+		if = {
+			limit = {
+				AND = {
+					check_variable = {
+						var = dissenter_threat
+						value = 49
+						compare = greater_than
+					}
+					check_variable = {
+						var = dissenter_threat
+						value = 61
+						compare = less_than
+					}
+					
+				}	
+			}
+			set_variable = {
+				var = current_dissenter_icon_frame
+				value = 6
+			}
+		}
+		
+		if = {
+			limit = {
+				AND = {
+					check_variable = {
+						var = dissenter_threat
+						value = 39
+						compare = greater_than
+					}
+					check_variable = {
+						var = dissenter_threat
+						value = 51
+						compare = less_than
+					}
+					
+				}	
+			}
+			set_variable = {
+				var = current_dissenter_icon_frame
+				value = 5
+			}
+		}
+		
+		if = {
+			limit = {
+				AND = {
+					check_variable = {
+						var = dissenter_threat
+						value = 29
+						compare = greater_than
+					}
+					check_variable = {
+						var = dissenter_threat
+						value = 41
+						compare = less_than
+					}
+					
+				}	
+			}
+			set_variable = {
+				var = current_dissenter_icon_frame
+				value = 4
+			}
+		}
+		
+		if = {
+			limit = {
+				AND = {
+					check_variable = {
+						var = dissenter_threat
+						value = 19
+						compare = greater_than
+					}
+					check_variable = {
+						var = dissenter_threat
+						value = 31
+						compare = less_than
+					}
+					
+				}	
+			}
+			set_variable = {
+				var = current_dissenter_icon_frame
+				value = 3
+			}
+		}
+		
+		if = {
+			limit = {
+				AND = {
+					check_variable = {
+						var = dissenter_threat
+						value = 9
+						compare = greater_than
+					}
+					check_variable = {
+						var = dissenter_threat
+						value = 21
+						compare = less_than
+					}
+					
+				}	
+			}
+			set_variable = {
+				var = current_dissenter_icon_frame
+				value = 2
+			}
+		}
+		
+		if = {
+			limit = {
+				AND = {
+					check_variable = {
+						var = dissenter_threat
+						value = -1
+						compare = greater_than
+					}
+					check_variable = {
+						var = dissenter_threat
+						value = 1
+						compare = less_than
+					}
+					
+				}	
+			}
+			set_variable = {
+				var = current_dissenter_icon_frame
+				value = 1
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					var = dissenter_threat
+					value = 0
+					compare = less_than
+				}
+			}
+			set_variable = {
+				var = dissenter_threat
+				value = 0
+			}
+		}
+		
+	}
+}
+
+country_event = {
+	id = purge.3
+	
+	hidden = yes
+	
+	trigger = {
+		tag = SMB
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				AND = {
+					check_variable = {
+						var = science_threat
+						value = 89
+						compare = greater_than
+					}
+					check_variable = {
+						var = science_threat
+						value = 100
+						compare = less_than
+					}
+					
+				}	
+			}
+			set_variable = {
+				var = current_science_icon_frame
+				value = 10
+			}
+		}
+		
+		if = {
+			limit = {
+				AND = {
+					check_variable = {
+						var = science_threat
+						value = 79
+						compare = greater_than
+					}
+					check_variable = {
+						var = science_threat
+						value = 91
+						compare = less_than
+					}
+					
+				}	
+			}
+			set_variable = {
+				var = current_science_icon_frame
+				value = 9
+			}
+		}
+		
+		if = {
+			limit = {
+				AND = {
+					check_variable = {
+						var = science_threat
+						value = 79
+						compare = greater_than
+					}
+					check_variable = {
+						var = science_threat
+						value = 91
+						compare = less_than
+					}
+					
+				}	
+			}
+			set_variable = {
+				var = current_science_icon_frame
+				value = 9
+			}
+		}
+		
+		if = {
+			limit = {
+				AND = {
+					check_variable = {
+						var = science_threat
+						value = 69
+						compare = greater_than
+					}
+					check_variable = {
+						var = science_threat
+						value = 81
+						compare = less_than
+					}
+					
+				}	
+			}
+			set_variable = {
+				var = current_science_icon_frame
+				value = 8
+			}
+		}
+		
+		if = {
+			limit = {
+				AND = {
+					check_variable = {
+						var = science_threat
+						value = 59
+						compare = greater_than
+					}
+					check_variable = {
+						var = science_threat
+						value = 71
+						compare = less_than
+					}
+					
+				}	
+			}
+			set_variable = {
+				var = current_science_icon_frame
+				value = 7
+			}
+		}
+		
+		if = {
+			limit = {
+				AND = {
+					check_variable = {
+						var = science_threat
+						value = 49
+						compare = greater_than
+					}
+					check_variable = {
+						var = science_threat
+						value = 61
+						compare = less_than
+					}
+					
+				}	
+			}
+			set_variable = {
+				var = current_science_icon_frame
+				value = 6
+			}
+		}
+		
+		if = {
+			limit = {
+				AND = {
+					check_variable = {
+						var = science_threat
+						value = 39
+						compare = greater_than
+					}
+					check_variable = {
+						var = science_threat
+						value = 51
+						compare = less_than
+					}
+					
+				}	
+			}
+			set_variable = {
+				var = current_science_icon_frame
+				value = 5
+			}
+		}
+		
+		if = {
+			limit = {
+				AND = {
+					check_variable = {
+						var = science_threat
+						value = 29
+						compare = greater_than
+					}
+					check_variable = {
+						var = science_threat
+						value = 41
+						compare = less_than
+					}
+					
+				}	
+			}
+			set_variable = {
+				var = current_science_icon_frame
+				value = 4
+			}
+		}
+		
+		if = {
+			limit = {
+				AND = {
+					check_variable = {
+						var = science_threat
+						value = 19
+						compare = greater_than
+					}
+					check_variable = {
+						var = science_threat
+						value = 31
+						compare = less_than
+					}
+					
+				}	
+			}
+			set_variable = {
+				var = current_science_icon_frame
+				value = 3
+			}
+		}
+		
+		if = {
+			limit = {
+				AND = {
+					check_variable = {
+						var = science_threat
+						value = 9
+						compare = greater_than
+					}
+					check_variable = {
+						var = science_threat
+						value = 21
+						compare = less_than
+					}
+					
+				}	
+			}
+			set_variable = {
+				var = current_science_icon_frame
+				value = 2
+			}
+		}
+		
+		if = {
+			limit = {
+				check_variable = {
+					var = science_threat
+					value = 1
+					compare = less_than
+				}	
+			}
+			set_variable = {
+				var = current_science_icon_frame
+				value = 1
+			}
+		}
+		
+		if = {
+			limit = {
+				check_variable = {
+					var = science_threat
+					value = 0
+					compare = less_than
+				}
+			}
+			set_variable = {
+				var = science_threat
+				value = 0
+			}
+		}
+	}
+}
+	
+	
+country_event = {
+	id = purge.4
+	
+	hidden = yes
+	
+	trigger = {
+		has_country_flag = SMB_civil_war
+		NOT = {
+			country_exists = PVB
+			country_exists = SAB
+		}
+	}
+	
+	immediate = {
+		set_country_flag = smb_politics_done
+	}
+}
+
+country_event = {
+	id = purge.5
+	title = purge.5.t
+	desc = purge.5.d
+	
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "purge.5.a"
+		ai_chance = { factor = 50 }
+	}
+}

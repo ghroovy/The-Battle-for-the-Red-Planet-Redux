@@ -1,0 +1,56 @@
+search_filter_prios = {
+	FOCUS_FILTER_POLITICAL = 1010
+
+	
+ 
+	
+	
+	FOCUS_FILTER_RESEARCH = 522
+
+	
+	FOCUS_FILTER_INDUSTRY = 509
+
+}
+
+focus_tree = {
+	id = amb_focus
+	
+	country = {
+		factor = 0
+		
+		#modifier = {
+		#	add = 10
+		#	#tag = AMB
+		#}
+	}
+	
+	reset_on_civilwar = no
+
+	initial_show_position = {
+		focus = industrial_effort
+	}
+	
+	
+	
+	focus = {
+		id = amb_start_the_war
+		icon = GFX_goal_generic_propaganda
+		available = { 
+			date > 2024.1.2
+		}
+
+		continue_if_invalid = yes
+				
+		x = 0
+		y = 0
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			declare_war_on = { target = WST  type = annex_everything }
+		}
+	}
+}

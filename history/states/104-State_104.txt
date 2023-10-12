@@ -1,0 +1,17 @@
+state={
+	id=104
+	name="STATE_104"
+	provinces={
+		1096 1120 1264 1668 2141 2336 2572 3361 3396 3759 3818 4128 4202 4396 5843 5845 5851 6091 7132 7304 8663 8931 9342 9344 9426 9477 9492 9540 
+	}
+	manpower = 100
+    buildings_max_level_factor=1.000
+    state_category = town
+	impassable = yes
+    history=
+    {
+        owner=WST
+        add_core_of = WST
+    }
+
+}

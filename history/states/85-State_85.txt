@@ -1,0 +1,16 @@
+state={
+	id=85
+	name="STATE_85"
+	provinces={
+		670 925 1243 1432 1643 1968 2353 2375 2413 2575 2770 3009 3485 3775 3876 4082 4099 4826 5211 5281 5557 5917 6649 6684 6830 6882 7386 7467 7507 7802 7973 9076 9359 9372 9417 9438 9439 9489 9505 
+	}
+	manpower = 100
+    buildings_max_level_factor=1.000
+    state_category = town
+    history=
+    {
+        owner=WST
+        add_core_of = WST
+    }
+
+}

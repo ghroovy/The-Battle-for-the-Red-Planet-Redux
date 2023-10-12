@@ -1,0 +1,17 @@
+state={
+	id=574
+	name="STATE_574"
+	provinces={
+		346 462 535 622 1416 1515 2308 2354 4559 6489 6498 6539 7232 8017 
+	}
+	manpower = 100
+    buildings_max_level_factor=1.000
+    state_category = town
+	impassable = yes
+    history=
+    {
+        owner=WST
+        add_core_of = WST
+    }
+
+}

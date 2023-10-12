@@ -1,0 +1,40 @@
+smb_science_purge = {
+	icon = GFX_idea_scientist_purge
+	enable = { always = yes }
+	research_speed_factor = smb_scientists_purged
+}
+
+smb_officer_purge = {
+	icon = GFX_idea_officer_purge
+	enable = { always = yes }
+	offence = smb_officers_purged
+	defence = smb_officers_purged
+	army_morale = smb_officers_purged
+	army_org = smb_officers_purged
+	experience_gain_army_factor = smb_officers_purged
+}
+
+smb_new_officers_modifier = {
+	icon = GFX_idea_new_officers_modifier
+	enable = { always = yes }
+	offence = smb_officers_purged
+	defence = smb_officers_purged
+	army_morale = smb_officers_purged
+	army_org = smb_officers_purged
+	experience_gain_army_factor = smb_officers_purged
+}
+
+smb_new_scientists_modifier = {
+	icon = GFX_idea_new_scientists_modifier
+	enable = { always = yes }
+	research_speed_factor = smb_scientists_purged
+}
+
+
+smb_leader_purge = {
+	icon = GFX_idea_leader_purge
+	enable = { always = yes }
+	political_power_factor = smb_leaders_purged
+	stability_factor = smb_leaders_purged
+	war_support_factor = smb_leaders_purged
+}

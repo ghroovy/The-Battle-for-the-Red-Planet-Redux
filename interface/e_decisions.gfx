@@ -1,0 +1,19 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_decision_category_smb_army_ui"
+		texturefile = "gfx/interface/decisions/purge_dissenter_ui.dds"
+		noOfFrames = 11
+	}
+	
+	spriteType = {
+		name = "GFX_decision_category_smb_dissenter_ui"
+		texturefile = "gfx/interface/decisions/purge_dissenter_ui.dds"
+		noOfFrames = 11
+	}
+	
+	spriteType = {
+		name = "GFX_decision_category_smb_science_ui"
+		texturefile = "gfx/interface/decisions/purge_dissenter_ui.dds"
+		noOfFrames = 11
+	}
+}

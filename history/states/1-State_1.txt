@@ -1,0 +1,17 @@
+state={
+	id=1
+	name="STATE_1"
+	provinces={
+		415 682 689 794 1000 1662 1736 1805 1818 2080 2252 2689 4548 5037 6102 
+	}
+	manpower = 100
+    buildings_max_level_factor=1.000
+    state_category = town
+	impassable = yes
+    history=
+    {
+        owner=WST
+        add_core_of = WST
+    }
+
+}

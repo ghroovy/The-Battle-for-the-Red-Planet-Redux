@@ -1,0 +1,44 @@
+spriteTypes = {
+	frameAnimatedSpriteType = {
+        name = "GFX_macarthur"
+        texturefile = "gfx/leaders/AMB/macarthur.dds"
+        noOfFrames = 5
+        
+        animation_rate_fps = 4
+        looping = yes
+        play_on_show = yes
+        pause_on_loop = 0
+        
+        allwaystransparent = no
+    }
+	
+	frameAnimatedSpriteType = {
+        name = "GFX_lenin"
+        texturefile = "gfx/leaders/SMB/lenin.dds"
+        noOfFrames = 5
+        
+        animation_rate_fps = 4
+        looping = yes
+        play_on_show = yes
+        pause_on_loop = 0
+        
+        allwaystransparent = no
+    }
+	
+	frameAnimatedSpriteType = {
+        name = "GFX_lenin2"
+        texturefile = "gfx/leaders/SMB/lenin2.dds"
+        noOfFrames = 80
+        
+        animation_rate_fps = 4
+        looping = yes
+        play_on_show = yes
+        pause_on_loop = 0
+        
+        allwaystransparent = no
+    }
+	
+	
+	
+
+}

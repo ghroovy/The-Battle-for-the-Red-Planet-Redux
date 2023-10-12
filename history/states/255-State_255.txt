@@ -1,0 +1,16 @@
+state={
+	id=255
+	name="STATE_255"
+	provinces={
+		382 572 1048 1078 1359 1611 2740 2875 3319 3598 3986 4353 4938 5285 5721 6073 6766 7066 7447 7703 8320 8542 8684 8692 10065 10130 10185 10224 10225 10270 10279 10300 10307 
+	}
+	manpower = 100
+    buildings_max_level_factor=1.000
+    state_category = town
+    history=
+    {
+        owner=WST
+        add_core_of = WST
+    }
+
+}
