@@ -35,19 +35,10 @@ set_technology = {
 
 set_convoys = 0
 
+recruit_character = WST_Wasteland
+
 set_popularities = {
 	neutrality = 100
-}
-
-create_country_leader = {
-	name = "Wasteland"
-	desc = ""
-	picture = "gfx/leaders/WST/mars.dds"
-	ideology = anarchism
-	
-	traits = {
-		#
-	}
 }
 
 add_ideas = {

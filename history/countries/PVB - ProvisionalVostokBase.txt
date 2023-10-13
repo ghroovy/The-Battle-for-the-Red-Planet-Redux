@@ -11,17 +11,6 @@ set_technology = {
 
 set_convoys = 0
 
-1939.1.1 = {
-	set_technology = {
-		infantry_weapons = 1
-		tech_support = 1
-		tech_recon = 1
-		support_weapons = 1
-		gw_artillery = 1
-	}
-}
-
-
 set_politics = {
 	ruling_party = independence
 	last_election = "2020.1.1"
@@ -32,7 +21,6 @@ set_politics = {
 set_popularities = {
 	independence = 100
 }
-
 
 1939.1.1 = {
 	set_politics = {

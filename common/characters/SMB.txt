@@ -1,0 +1,28 @@
+characters={
+	SMB_Disorder={
+		name=SMB_Disorder
+		portraits={
+			civilian={
+				large="gfx/leaders/WST/mars.dds"
+			}
+		}
+		country_leader={
+			ideology=anarchism
+			expire="1.1.1.1"
+			id=-1
+		}
+	}
+	SMB_Protokol_Krasnyy={
+		name=SMB_Protokol_Krasnyy
+		portraits={
+			civilian={
+				large="GFX_lenin"
+			}
+		}
+		country_leader={
+			ideology=leninism
+			expire="1.1.1.1"
+			id=-1
+		}
+	}
+}

@@ -111,7 +111,7 @@ ideologies = {
 		faction_modifiers = {
 			faction_trade_opinion_factor = 0.50 #plus 50% trade opinion
 		}
-		ai_neutral = yes # uses the democratic AI behaviour
+		ai_neutral = yes # uses the conservatism_i AI behaviour
 	}
 
 	
@@ -166,7 +166,7 @@ ideologies = {
 		faction_modifiers = {
 			faction_trade_opinion_factor = 0.50 #plus 50% trade opinion
 		}
-		ai_neutral = yes # uses the democratic AI behaviour
+		ai_neutral = yes # uses the conservatism_i AI behaviour
 	}
 	
 	conservatism_i = {
@@ -220,7 +220,7 @@ ideologies = {
 		faction_modifiers = {
 			faction_trade_opinion_factor = 0.50 #plus 50% trade opinion
 		}
-		ai_neutral = yes # uses the democratic AI behaviour
+		ai_neutral = yes # uses the conservatism_i AI behaviour
 	}
 	
 	independence = {

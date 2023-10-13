@@ -1,0 +1,16 @@
+characters={
+	EUB_Allied_Council={
+		name=EUB_Allied_Council
+		portraits={
+			civilian={
+				large="gfx/leaders/EUB/Council.dds"
+			}
+		}
+		country_leader={
+			ideology=socialism
+			traits={ Divided_Interests Cabinet_crisis }
+			expire="2020.5.1"
+			id=-1
+		}
+	}
+}

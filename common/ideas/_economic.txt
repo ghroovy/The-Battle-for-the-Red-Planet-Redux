@@ -642,7 +642,7 @@ ideas = {
 			available = {
 				OR = {
 					AND = {
-						has_government = democratic
+						has_government = conservatism_i
 						has_war = yes
 						any_enemy_country = {
 							ic_ratio = {
@@ -652,7 +652,7 @@ ideas = {
 						}
 					}
 					AND = {
-						NOT = { has_government = democratic }
+						NOT = { has_government = conservatism_i }
 						OR = {
 							has_idea = partial_economic_mobilisation
 							has_idea = war_economy

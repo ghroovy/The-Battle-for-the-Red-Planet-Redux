@@ -1,0 +1,16 @@
+characters={
+	GMB_Ernst_Engel={
+		name=GMB_Ernst_Engel
+		portraits={
+			civilian={
+				large="gfx/leaders/GMB/Ernst.dds"
+			}
+		}
+		country_leader={
+			ideology=nazism
+			traits={ nationalist_symbol cornered_fox anti_communist anti_democrat }
+			expire="1.1.1.1"
+			id=-1
+		}
+	}
+}

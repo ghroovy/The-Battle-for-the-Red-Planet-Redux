@@ -1,0 +1,15 @@
+characters={
+	WST_Wasteland={
+		name=WST_Wasteland
+		portraits={
+			civilian={
+				large="gfx/leaders/WST/mars.dds"
+			}
+		}
+		country_leader={
+			ideology=anarchism
+			expire="1.1.1.1"
+			id=-1
+		}
+	}
+}

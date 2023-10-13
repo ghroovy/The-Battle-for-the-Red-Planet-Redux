@@ -1,0 +1,15 @@
+characters={
+	CMB_Aaron_Daniel={
+		name=CMB_Aaron_Daniel
+		portraits={
+			civilian={
+				large="gfx/leaders/CMB/Aaron.dds"
+			}
+		}
+		country_leader={
+			ideology=socialism
+			expire="2020.5.1"
+			id=-1
+		}
+	}
+}

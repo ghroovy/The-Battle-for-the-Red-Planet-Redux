@@ -67,7 +67,7 @@ democratic_on_the_rise = {
 	}
 	
 	#visible = {
-	#	NOT = { has_government = democratic }
+	#	NOT = { has_government = conservatism_i }
 	#	has_idea_with_trait = democratic_reformer
 	#}
 }

@@ -296,8 +296,8 @@ has_same_ideology = {
 		tooltip = has_same_ideology_tt
 		OR = {
 			AND = {
-				has_government = democratic
-				ROOT = { has_government = democratic }
+				has_government = conservatism_i
+				ROOT = { has_government = conservatism_i }
 			}
 			AND = {
 				has_government = fascism

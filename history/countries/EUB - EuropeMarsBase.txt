@@ -11,16 +11,7 @@ set_technology = {
 
 set_convoys = 0
 
-1939.1.1 = {
-	set_technology = {
-		infantry_weapons = 1
-		tech_support = 1
-		tech_recon = 1
-		support_weapons = 1
-		gw_artillery = 1
-	}
-}
-
+recruit_character = EUB_Allied_Council
 
 set_politics = {
 	ruling_party = socialism_i
@@ -33,18 +24,6 @@ set_popularities = {
 	socialism_i = 80
 	liberalism_i = 10
 	conservatism_i = 10
-}
-
-create_country_leader = {	
-	name = "Allied Council"
-	picture = "gfx/leaders/EUB/Council.dds"
-	expire = "2020.5.1"
-	ideology = socialism
-	traits = {
-		Divided_Interests
-		Cabinet_crisis
-	}
-
 }
 
 2020.1.1 = {

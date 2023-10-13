@@ -1,0 +1,28 @@
+characters={
+	AMB_MacAI={
+		name=AMB_MacAI
+		portraits={
+			civilian={
+				large="GFX_macarthur"
+			}
+			army={
+				small="GFX_macarthur"
+			}
+		}
+		country_leader={
+			ideology=conservatism
+			traits={ american_caesar anti_communist mastermind_code_cracker }
+			expire="1.1.1.1"
+			id=-1
+		}
+		field_marshal={
+			traits = { }
+			skill = 5
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 4
+			legacy_id=-1
+		}
+	}
+}

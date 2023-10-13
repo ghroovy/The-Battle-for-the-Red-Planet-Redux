@@ -32,6 +32,7 @@ replace_path="country_leader"
 replace_path="common/characters"
 replace_path="events"
 replace_path="common/military_industrial_organization/organizations"
+replace_path="gfx/loadingscreens"
 tags={
 	"Map"
 	"Alternative History"

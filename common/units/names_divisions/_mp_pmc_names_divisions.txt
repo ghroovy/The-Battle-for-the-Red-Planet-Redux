@@ -1,0 +1,84 @@
+﻿PMC_GENERIC_INF_01 = 
+{
+	name = "PMC Division"
+
+	for_countries = { }
+
+	can_use = { always = yes }
+
+	division_types = { "private_military_companies" }
+
+	fallback_name = "%d PMC"
+	
+	ordered =
+	{
+		1 = { "%dst PMC" }
+		2 = { "%dnd PMC" }
+		3 = { "%drd PMC" }
+		5 = { "%dth PMC" }
+		6 = { "%dth PMC" }
+		4 = { "%dth PMC" }
+		7 = { "%dth PMC" }
+		8 = { "%dth PMC" }
+		9 = { "%dth PMC" }
+		10 = { "%dth PMC" }
+		11 = { "%dth PMC" }
+		12 = { "%dth PMC" }
+	}
+}
+PMC_BLACKWATER_INF_01 = 
+{
+	name = "PMC - Blackwater"
+
+	for_countries = { }
+
+	can_use = { always = yes }
+
+	division_types = { "private_military_companies" }
+
+	fallback_name = "%d PMC - Blackwater"
+	
+	ordered =
+	{
+		1 = { "%dst PMC - Blackwater" }
+		2 = { "%dnd PMC - Blackwater" }
+		3 = { "%drd PMC - Blackwater" }
+		5 = { "%dth PMC - Blackwater" }
+		6 = { "%dth PMC - Blackwater" }
+		4 = { "%dth PMC - Blackwater" }
+		7 = { "%dth PMC - Blackwater" }
+		8 = { "%dth PMC - Blackwater" }
+		9 = { "%dth PMC - Blackwater" }
+		10 = { "%dth PMC - Blackwater" }
+		11 = { "%dth PMC - Blackwater" }
+		12 = { "%dth PMC - Blackwater" }
+	}
+}
+PMC_EXECUTIVE_OUTCOMES_INF_01 = 
+{
+	name = "PMC - Executive Outcomes"
+
+	for_countries = { }
+
+	can_use = { always = yes }
+
+	division_types = { "private_military_companies" }
+
+	fallback_name = "%d PMC - Executive Outcomes"
+	
+	ordered =
+	{
+		1 = { "%dst PMC - Executive Outcomes" }
+		2 = { "%dnd PMC - Executive Outcomes" }
+		3 = { "%drd PMC - Executive Outcomes" }
+		5 = { "%dth PMC - Executive Outcomes" }
+		6 = { "%dth PMC - Executive Outcomes" }
+		4 = { "%dth PMC - Executive Outcomes" }
+		7 = { "%dth PMC - Executive Outcomes" }
+		8 = { "%dth PMC - Executive Outcomes" }
+		9 = { "%dth PMC - Executive Outcomes" }
+		10 = { "%dth PMC - Executive Outcomes" }
+		11 = { "%dth PMC - Executive Outcomes" }
+		12 = { "%dth PMC - Executive Outcomes" }
+	}
+}
